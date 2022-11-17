@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221109 17:35:34.754" rpa="false" schemaversion="3">
+<suite id="s1" name="Example-master" source="C:\Users\MKhaled\Downloads\Example-master\Example-master">
+<suite id="s1-s1" name="TestRunner" source="C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner">
+<suite id="s1-s1-s1" name="Login" source="C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot">
+<test id="s1-s1-s1-t1" name="Login with Valid Username &amp; Password" line="8">
+<kw name="User Login">
+<arg>${username}</arg>
+<arg>${password}</arg>
+<msg timestamp="20221109 17:35:35.254" level="FAIL">No keyword with name 'User Login' found.</msg>
+<status status="FAIL" starttime="20221109 17:35:35.249" endtime="20221109 17:35:35.257"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Home}</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20221109 17:35:35.266" endtime="20221109 17:35:35.267"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20221109 17:35:35.267" endtime="20221109 17:35:35.268"/>
+</kw>
+<status status="FAIL" starttime="20221109 17:35:35.236" endtime="20221109 17:35:35.269">No keyword with name 'User Login' found.</status>
+</test>
+<doc>MedadCMP LoginPage</doc>
+<status status="FAIL" starttime="20221109 17:35:34.829" endtime="20221109 17:35:35.276"/>
+</suite>
+<status status="FAIL" starttime="20221109 17:35:34.820" endtime="20221109 17:35:35.286"/>
+</suite>
+<status status="FAIL" starttime="20221109 17:35:34.766" endtime="20221109 17:35:35.293"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Example-master">Example-master</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="TestRunner">Example-master.TestRunner</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Login">Example-master.TestRunner.Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221109 17:35:35.231" level="ERROR">Error in file 'C:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot' on line 4: Resource file '..\AcademicStructure\Login.robot' does not exist.</msg>
+</errors>
+</robot>

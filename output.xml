@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221115 16:49:13.679" rpa="false" schemaversion="3">
+<suite id="s1" name="Login" source="c:\Users\MKhaled\Downloads\Example-master\Example-master\TestRunner\Login.robot">
+<test id="s1-t1" name="Etevdg gf gf" line="12">
+<kw name="Read Excle" library="campuses">
+<kw name="Get File" library="OperatingSystem">
+<var>${csv}</var>
+<arg>testdata.csv</arg>
+<doc>Returns the contents of a specified file.</doc>
+<msg timestamp="20221115 16:49:16.100" level="INFO" html="true">Getting file '&lt;a href="file://C:\Users\MKhaled\Downloads\Example-master\Example-master\testdata.csv"&gt;C:\Users\MKhaled\Downloads\Example-master\Example-master\testdata.csv&lt;/a&gt;'.</msg>
+<msg timestamp="20221115 16:49:16.104" level="INFO">${csv} = ﻿${username},${password}
+mohammed.khaled@naseej.com,Medad@123
+</msg>
+<status status="PASS" starttime="20221115 16:49:16.099" endtime="20221115 16:49:16.104"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${read}</var>
+<arg>${csv}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20221115 16:49:16.105" level="INFO">${read} = ['\ufeff${username},${password}\nmohammed.khaled@naseej.com,Medad@123\n']</msg>
+<status status="PASS" starttime="20221115 16:49:16.105" endtime="20221115 16:49:16.105"/>
+</kw>
+<for flavor="IN">
+<var>${line}</var>
+<value>@{read}</value>
+<iter>
+<var name="${line}">﻿${username},${password}
+mohammed.khaled@naseej.com,Medad@123
+</var>
+<kw name="Log" library="BuiltIn">
+<arg>${line}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20221115 16:49:16.107" level="INFO">﻿${username},${password}
+mohammed.khaled@naseej.com,Medad@123
+</msg>
+<status status="PASS" starttime="20221115 16:49:16.107" endtime="20221115 16:49:16.108"/>
+</kw>
+<status status="PASS" starttime="20221115 16:49:16.106" endtime="20221115 16:49:16.108"/>
+</iter>
+<status status="PASS" starttime="20221115 16:49:16.106" endtime="20221115 16:49:16.109"/>
+</for>
+<status status="PASS" starttime="20221115 16:49:16.099" endtime="20221115 16:49:16.110"/>
+</kw>
+<status status="PASS" starttime="20221115 16:49:16.097" endtime="20221115 16:49:16.111"/>
+</test>
+<doc>MedadCMP LoginPage</doc>
+<status status="PASS" starttime="20221115 16:49:13.696" endtime="20221115 16:49:16.116"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221115 16:49:16.084" level="WARN">This is a deprecated import that will be removed in favor of RPA.Robocorp.WorkItems</msg>
+<msg timestamp="20221115 16:49:16.096" level="WARN">No input work items file found: None</msg>
+</errors>
+</robot>

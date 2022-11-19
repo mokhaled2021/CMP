@@ -2,9 +2,8 @@
 Library     SeleniumLibrary
 Resource    ../AcademicStructure/Login.robot
 Resource    ../AcademicStructure/common.robot
-Variables    ../TestData/TestData.py
+Variables   ../TestData/TestData.py
 Variables   ../Locators/locators.py
-Library    OperatingSystem
 
 *** keywords***
 Open the Cumpuses page

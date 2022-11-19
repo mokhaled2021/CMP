@@ -14,7 +14,6 @@ Add_Campuses = "//span[@data-label='Add%20Campus']"
 College_Link =  "//a[@href='/app/college']"
 Add_College = "//span[@data-label='Add%20College']"
 
-
 # ======= Add New Institutions Fileds ========
 Institution_Code_Field = "//input[@data-fieldname='institution_code']"
 Institution_Name_Field = "//input[@data-fieldname='institution_name']"

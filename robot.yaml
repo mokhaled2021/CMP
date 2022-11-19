@@ -17,9 +17,12 @@ environmentConfigs:
 artifactsDir: output  
 
 PATH:
-  - .
+- .
+- bin
+
 PYTHONPATH:
-  - .
+- .
+- libraries
 
 ignoreFiles:
   - .gitignore

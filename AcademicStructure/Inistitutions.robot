@@ -5,6 +5,7 @@ Resource    ../AcademicStructure/common.robot
 Variables   ../TestData/TestData.py
 Variables   ../Locators/locators.py
 
+
 *** keywords***
 Open the Institution page
     Wait Until Page Contains Element    ${Institution_Link}

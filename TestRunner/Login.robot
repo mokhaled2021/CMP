@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation  MedadCMP LoginPage
 Library  SeleniumLibrary
-Resource  ../AcademicStructure/Login.robot
+Resource  ../PageObjects/KeywordDefinationFiles/common.robot
 
 
 *** Test Cases ***

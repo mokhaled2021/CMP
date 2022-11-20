@@ -2,10 +2,10 @@
 Library     SeleniumLibrary  
 Variables   ../TestData/TestData.py
 Variables   ../Locators/locators.py
-Resource    ../AcademicStructure/Login.robot
-Resource    ../AcademicStructure/campuses.robot
-Resource    ../AcademicStructure/Colleges.robot
-Resource    ../AcademicStructure/Inistitutions.robot
+Resource    ../KeywordDefinationFiles/Login.robot
+Resource    ../KeywordDefinationFiles/campuses.robot
+Resource    ../KeywordDefinationFiles/Colleges.robot
+Resource    ../KeywordDefinationFiles/Inistitutions.robot
 Resource    Inistitutions.robot
 Resource    Colleges.robot
 Resource    campuses.robot

@@ -1,6 +1,5 @@
 *** Settings ***
-Resource    ../AcademicStructure/common.robot
-
+Resource    ../KeywordDefinationFiles/common.robot
 
 *** keywords***
 Open the Institution page

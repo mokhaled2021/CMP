@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../AcademicStructure/common.robot
+Resource    ../KeywordDefinationFiles/common.robot
 
 *** keywords***
 Add new Campuses
@@ -16,8 +16,6 @@ Open the Cumpuses page
 Click button Add new campuses
     Wait Until Page Contains Element     ${Add_Campuses}     timeout=10
     Click Element  ${Add_Campuses}
-    sleep   5
-    Press Keys    /html/body/div[7]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/input     Enter 
     
 
 Fill field Campus Name

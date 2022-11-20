@@ -1,11 +1,11 @@
-# ===== Login Fields ==========
+# Login Fields
 Username_field = "//input[@id='login_email']"
 password_field = "//input[@id='login_password']"
 Login_Button = "//button[@type='submit']"
 Success_Login = "//input[@id='navbar-search']"
 Institution_title = "//h3[@title='New Institution']"
 
-# ==== Links Locators ============
+#  Links Locators
 Academic_Structure = "//a[@href='/app/academic-structure']"
 Institution_Link = "//a[@href='/app/institution']"
 Add_Inistitutions = "//span[@data-label='Add%20Institution']"
@@ -14,7 +14,7 @@ Add_Campuses = "//span[@data-label='Add%20Campus']"
 College_Link =  "//a[@href='/app/college']"
 Add_College = "//span[@data-label='Add%20College']"
 
-# ======= Add New Institutions Fileds ========
+# Add New Institutions Fileds 
 Institution_Code_Field = "//input[@data-fieldname='institution_code']"
 Institution_Name_Field = "//input[@data-fieldname='institution_name']"
 Institutional_Type_Field ="//input[@data-fieldname='institutional_type']"
@@ -32,13 +32,13 @@ Date_of_establishment_date = "//div[@id='datepickers-container']/div/div[1]/div/
 Submit_Institution = "//button[@data-label='Save']"
 Successfully_Saved = "//*[@id='alert-container']"
 
-# ======= Add New Campuses Fileds ========
+# Add New Campuses Fileds 
 Campus_name_field = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/input"
 campus_code_field = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[2]/div/div[2]/div[1]/input"
 campus_location_field = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[3]/div/div[2]/div[1]/input"
 Submit_Campus = "/html/body/div[8]/div/div/div[3]/div[2]/button[2]"
 
-# ======= Add New Colleges Fileds ========
+#Add New Colleges Fileds 
 College_Name_field = "//input[@data-fieldname='college_name'][@data-doctype='College']"
 College_Code_field = "//input[@data-fieldname='college_code'][@data-doctype='College']"
 Establishment_date_field = "//input[@data-fieldname='establishment_date']"

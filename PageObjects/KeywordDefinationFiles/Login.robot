@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../AcademicStructure/common.robot
+Resource    ../KeywordDefinationFiles/common.robot
    
 *** Keywords ***
 User Login 

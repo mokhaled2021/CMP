@@ -2,7 +2,7 @@
 Resource    ../KeywordDefinationFiles/common.robot
    
 *** Keywords ***
-User Login 
+Login To The ControlPanel
     [Arguments]         ${username}            ${password}
     Opening Browser     ${site_url}${login}    ${browser}
     Maximize Browser Window

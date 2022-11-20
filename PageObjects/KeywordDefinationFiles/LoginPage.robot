@@ -6,7 +6,7 @@ Login To The ControlPanel
     [Arguments]         ${username}            ${password}
     Opening Browser     ${site_url}${login}    ${browser}
     Maximize Browser Window
-    Wait Until Page Contains Element  ${Username_field}
+    Wait Until Page Contains Element  ${Username_Locator}
     Enter Username
     Enter Password
     Click on Login button 
@@ -14,9 +14,9 @@ Login To The ControlPanel
 
 # ===================== Details for Every Step =======================
 Enter Username
-    Input Text       ${Username_field}  ${username}
+    Input Text       ${Username_Locator}  ${username}
 Enter Password
-    Input Text       ${password_field}  ${password}
+    Input Text       ${password_Locator}  ${password}
  Click on Login button
     Click Element    ${Login_Button}
 

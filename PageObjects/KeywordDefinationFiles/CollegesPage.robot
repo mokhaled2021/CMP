@@ -21,11 +21,11 @@ Click add colleges button
     Wait Until Page Contains Element     ${Add_College}  timeout=10
     Click Element  ${Add_College}
 Fill field College Name
-    Input Text    ${College_Name_field}   ${College_Name}
+    Input Text    ${College_Name_Locator}   ${College_Name}
 Fill field College Code
-    Input Text    ${College_Code_field}  ${College_Code}
+    Input Text    ${College_Code_Locator}  ${College_Code}
 Select field Establishment Date
-    Click Element    ${Establishment_date_field}
+    Click Element    ${Establishment_date_Locator}
     Wait Until Page Contains Element    ${Establishment_date}
     Click Element    ${Establishment_date}
 

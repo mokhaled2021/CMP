@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221120 17:43:12.034" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221120 18:00:00.146" rpa="false" schemaversion="3">
 <suite id="s1" name="Login" source="c:\Users\MKhaled\CMP\Tests\Login.robot">
 <test id="s1-t1" name="Login with Valid Username &amp; Password" line="7">
-<kw name="User Login" library="LoginPage">
+<kw name="Login To The ControlPanel" library="LoginPage">
 <arg>${username}</arg>
 <arg>${password}</arg>
 <kw name="Opening Browser" library="common">
@@ -12,75 +12,75 @@
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221120 17:43:12.400" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
-<status status="PASS" starttime="20221120 17:43:12.400" endtime="20221120 17:43:17.601"/>
+<msg timestamp="20221120 18:00:00.517" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
+<status status="PASS" starttime="20221120 18:00:00.517" endtime="20221120 18:00:04.838"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Username_field}</arg>
+<arg>${Username_Locator}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221120 17:43:17.602" endtime="20221120 17:43:17.615"/>
+<status status="PASS" starttime="20221120 18:00:04.838" endtime="20221120 18:00:04.851"/>
 </kw>
-<status status="PASS" starttime="20221120 17:43:12.399" endtime="20221120 17:43:17.615"/>
+<status status="PASS" starttime="20221120 18:00:00.516" endtime="20221120 18:00:04.852"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221120 17:43:17.615" endtime="20221120 17:43:17.745"/>
+<status status="PASS" starttime="20221120 18:00:04.852" endtime="20221120 18:00:04.976"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
-<arg>${Username_field}</arg>
+<arg>${Username_Locator}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221120 17:43:17.748" endtime="20221120 17:43:17.765"/>
+<status status="PASS" starttime="20221120 18:00:04.977" endtime="20221120 18:00:04.987"/>
 </kw>
 <kw name="Enter Username" library="LoginPage">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${Username_field}</arg>
+<arg>${Username_Locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 17:43:17.768" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//input[@id='login_email']'.</msg>
-<status status="PASS" starttime="20221120 17:43:17.767" endtime="20221120 17:43:17.871"/>
+<msg timestamp="20221120 18:00:04.990" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//input[@id='login_email']'.</msg>
+<status status="PASS" starttime="20221120 18:00:04.988" endtime="20221120 18:00:05.139"/>
 </kw>
-<status status="PASS" starttime="20221120 17:43:17.766" endtime="20221120 17:43:17.872"/>
+<status status="PASS" starttime="20221120 18:00:04.988" endtime="20221120 18:00:05.140"/>
 </kw>
 <kw name="Enter Password" library="LoginPage">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${password_field}</arg>
+<arg>${password_Locator}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 17:43:17.873" level="INFO">Typing text 'Medad@123' into text field '//input[@id='login_password']'.</msg>
-<status status="PASS" starttime="20221120 17:43:17.872" endtime="20221120 17:43:18.001"/>
+<msg timestamp="20221120 18:00:05.141" level="INFO">Typing text 'Medad@123' into text field '//input[@id='login_password']'.</msg>
+<status status="PASS" starttime="20221120 18:00:05.140" endtime="20221120 18:00:05.228"/>
 </kw>
-<status status="PASS" starttime="20221120 17:43:17.872" endtime="20221120 17:43:18.001"/>
+<status status="PASS" starttime="20221120 18:00:05.140" endtime="20221120 18:00:05.228"/>
 </kw>
 <kw name=" Click on Login button" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Login_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 17:43:18.002" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20221120 17:43:18.002" endtime="20221120 17:43:18.046"/>
+<msg timestamp="20221120 18:00:05.229" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20221120 18:00:05.229" endtime="20221120 18:00:05.273"/>
 </kw>
-<status status="PASS" starttime="20221120 17:43:18.001" endtime="20221120 17:43:18.047"/>
+<status status="PASS" starttime="20221120 18:00:05.229" endtime="20221120 18:00:05.273"/>
 </kw>
 <kw name="Home page is opened Successfully" library="LoginPage">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Success_Login}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221120 17:43:18.048" endtime="20221120 17:43:24.780"/>
+<status status="PASS" starttime="20221120 18:00:05.274" endtime="20221120 18:00:08.675"/>
 </kw>
-<status status="PASS" starttime="20221120 17:43:18.047" endtime="20221120 17:43:24.781"/>
+<status status="PASS" starttime="20221120 18:00:05.273" endtime="20221120 18:00:08.675"/>
 </kw>
-<status status="PASS" starttime="20221120 17:43:12.399" endtime="20221120 17:43:24.781"/>
+<status status="PASS" starttime="20221120 18:00:00.516" endtime="20221120 18:00:08.675"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Success_Login}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 17:43:24.782" endtime="20221120 17:43:24.839"/>
+<status status="PASS" starttime="20221120 18:00:08.676" endtime="20221120 18:00:08.703"/>
 </kw>
-<status status="PASS" starttime="20221120 17:43:12.398" endtime="20221120 17:43:24.839"/>
+<status status="PASS" starttime="20221120 18:00:00.514" endtime="20221120 18:00:08.703"/>
 </test>
 <doc>MedadCMP LoginPage</doc>
-<status status="PASS" starttime="20221120 17:43:12.044" endtime="20221120 17:43:24.839"/>
+<status status="PASS" starttime="20221120 18:00:00.155" endtime="20221120 18:00:08.705"/>
 </suite>
 <statistics>
 <total>

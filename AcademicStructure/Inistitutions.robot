@@ -1,15 +1,18 @@
 *** Settings ***
-Library     SeleniumLibrary
-Resource    ../AcademicStructure/Login.robot
 Resource    ../AcademicStructure/common.robot
-Variables   ../TestData/TestData.py
-Variables   ../Locators/locators.py
 
 
 *** keywords***
 Open the Institution page
     Wait Until Page Contains Element    ${Institution_Link}
     Click Element    ${Institution_Link}
+
+Add new Inistitutions
+    Open the AcademicStructure page
+    Open the Institution page
+    Click button Add new Inistitutions
+    Fill Form of Add Inistitutions
+    click submit Institution Button
 
 Click button Add new Inistitutions
     Wait Until Page Contains Element     ${Add_Inistitutions}

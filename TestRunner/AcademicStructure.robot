@@ -1,9 +1,6 @@
 *** Settings ***
 Documentation  MedadCMP LoginPage
-Library  SeleniumLibrary
-Resource  ../AcademicStructure/Login.robot
 Resource  ../AcademicStructure/common.robot
-Resource  ../AcademicStructure/Inistitutions.robot
 Test Teardown   closing Browser
 
 

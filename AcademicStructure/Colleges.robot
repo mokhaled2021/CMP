@@ -1,13 +1,15 @@
 *** Settings ***
-Library     SeleniumLibrary
-Resource    ../AcademicStructure/Login.robot
 Resource    ../AcademicStructure/common.robot
-Variables    ../TestData/TestData.py
-Variables   ../Locators/locators.py
 
 *** keywords***
-    
- Fill Form of Add Colleges
+Add new College
+    Open the AcademicStructure page
+    Open the Colleges page
+    Click add colleges button
+    Fill Form of Add Colleges
+    Click submit college button
+
+Fill Form of Add Colleges
     Fill field College Name
     Fill field College Code
     Select field Establishment Date

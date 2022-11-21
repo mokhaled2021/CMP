@@ -6,6 +6,7 @@ Resource    ../KeywordDefinationFiles/LoginPage.robot
 Resource    ../KeywordDefinationFiles/CampusesPage.robot
 Resource    ../KeywordDefinationFiles/CollegesPage.robot
 Resource    ../KeywordDefinationFiles/InistitutionsPage.robot
+Resource    ../KeywordDefinationFiles/AcademicProgramPage.robot
 
 
 *** Variables ***

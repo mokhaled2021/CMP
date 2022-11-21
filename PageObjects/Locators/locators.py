@@ -13,8 +13,10 @@ Campuses_Link = "//a[@href='/app/campus']"
 Add_Campuses = "//span[@data-label='Add%20Campus']"
 College_Link =  "//a[@href='/app/college']"
 Add_College = "//span[@data-label='Add%20College']"
+Academic_Program_Link = "//a[@href='/app/academic-program']"
+Add_Academic_Program = "//span[@data-label='Add%20Academic%20Program']"
 
-# Add New Institutions Fileds 
+# Institutions Locators 
 Institution_Code_Locator = "//input[@data-Locatorname='institution_code']"
 Institution_Name_Locator = "//input[@data-Locatorname='institution_name']"
 Institutional_Type_Locator ="//input[@data-Locatorname='institutional_type']"
@@ -32,13 +34,13 @@ Date_of_establishment_date = "//div[@id='datepickers-container']/div/div[1]/div/
 Submit_Institution = "//button[@data-label='Save']"
 Successfully_Saved = "//*[@id='alert-container']"
 
-# Add New Campuses Fileds 
+# Campuses Locators 
 Campus_name_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/input"
 campus_code_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[2]/div/div[2]/div[1]/input"
 campus_location_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[3]/div/div[2]/div[1]/input"
 Submit_Campus = "/html/body/div[8]/div/div/div[3]/div[2]/button[2]"
 
-#Add New Colleges Fileds 
+# Colleges Locators 
 College_Name_Locator = "//input[@data-Locatorname='college_name'][@data-doctype='College']"
 College_Code_Locator = "//input[@data-Locatorname='college_code'][@data-doctype='College']"
 Establishment_date_Locator = "//input[@data-Locatorname='establishment_date']"
@@ -48,3 +50,40 @@ Add_capmus_row = "//button[@class='btn btn-xs btn-secondary grid-add-row']"
 click_in_campus_row = "(//DIV[@class='col grid-static-col col-xs-10 '])[2]"
 Select_campus = "//P[@title='1']"
 Submit_college = "//*[@id='page-College']/div[1]/div/div/div[2]/div[3]/button[2]/span"
+
+# Academic Program Locators
+Program_Name_Locator = "//input[@data-fieldname='program_name']"
+Program_Code_Locator  = "//input[@data-fieldname='program_code']" 
+Status_Locator  = "//Select[@data-fieldname='status']" 
+Status_Option_Locator  = "//Select[@data-fieldname='status']/option[1]"
+Major_Locator  = "//input[@data-target='Major']" 
+Major_Option_Locator = "//ul[@id='awesomplete_list_4']/li[1]"
+Education_level_Locator  = "//input[@data-fieldname='education_level']" 
+Education_level_Option_Locator = "//ul[@id='awesomplete_list_6']/li[1]"
+Degree_Locator  = "//input[@data-fieldname='degree']"
+Degree_Option_Locator = "//ul[@id='awesomplete_list_7']/li[1]"
+Scientific_Certificate_Locator  = "//input[@data-fieldname='scientific_certificate']"
+Scientific_Certificate_Option_Locator = "//ul[@id='awesomplete_list_5']/li[1]"
+Add_Ownership_Button = ""
+Ownership_Campus_Locator = ""
+Ownership_College_Locator = ""
+Ownership_Department_Locator = ""
+Add_Tracks_Button = ""
+Track_Name_Locator = ""
+Student_Gender_Locator = ""
+Qualification_Level_Locator = ""
+Period_Type_Locator = ""
+Program_Type_Locator = ""
+Mode_of_Instruction_Locator = ""
+Periods_to_complete_the_program_Locator = ""
+Program_Language_Locator = ""
+Maximum_Terms_to_complete_the_program_Locator = ""
+Program_Discipline_Domain_Locator = ""
+Study_Start_Date_Locator = ""
+Total_Credit_Hours_Locator = ""
+Current_capacity_Locator = ""
+Web_View_Section_Name_Locator = ""
+Add_Section_Name_Button = ""
+Web_View_Section_MyField_Locator = ""
+Web_View_Section_Camp_Locator = ""
+

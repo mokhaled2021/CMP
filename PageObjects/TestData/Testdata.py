@@ -18,3 +18,7 @@ Campus_location = "data"
 # Add New Colleges 
 College_Name = "mokhaled"
 College_Code = "2121"
+
+# Academic Program 
+Program_Name = "khaledno"
+Program_Code = "KH147"

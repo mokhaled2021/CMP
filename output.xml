@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221120 18:00:00.146" rpa="false" schemaversion="3">
-<suite id="s1" name="Login" source="c:\Users\MKhaled\CMP\Tests\Login.robot">
-<test id="s1-t1" name="Login with Valid Username &amp; Password" line="7">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221120 23:28:05.194" rpa="false" schemaversion="3">
+<suite id="s1" name="AcademicStructure" source="c:\Users\MKhaled\CMP\Tests\AcademicStructure.robot">
+<test id="s1-t1" name="TC4: Add new Academic Program" line="15">
+<kw name="Add new Academic Program" library="AcademicProgramPage">
+<kw name="Open the AcademicStructure page" library="common">
 <kw name="Login To The ControlPanel" library="LoginPage">
 <arg>${username}</arg>
 <arg>${password}</arg>
@@ -12,84 +14,197 @@
 <arg>${site_url}</arg>
 <arg>${browser}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221120 18:00:00.517" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
-<status status="PASS" starttime="20221120 18:00:00.517" endtime="20221120 18:00:04.838"/>
+<msg timestamp="20221120 23:28:07.515" level="INFO">Opening browser 'Chrome' to base url 'https://sis.medadstg.com/#login'.</msg>
+<status status="PASS" starttime="20221120 23:28:07.515" endtime="20221120 23:28:13.107"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Username_Locator}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221120 18:00:04.838" endtime="20221120 18:00:04.851"/>
+<status status="PASS" starttime="20221120 23:28:13.107" endtime="20221120 23:28:13.135"/>
 </kw>
-<status status="PASS" starttime="20221120 18:00:00.516" endtime="20221120 18:00:04.852"/>
+<status status="PASS" starttime="20221120 23:28:07.515" endtime="20221120 23:28:13.135"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20221120 18:00:04.852" endtime="20221120 18:00:04.976"/>
+<status status="PASS" starttime="20221120 23:28:13.135" endtime="20221120 23:28:13.275"/>
 </kw>
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Username_Locator}</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221120 18:00:04.977" endtime="20221120 18:00:04.987"/>
+<status status="PASS" starttime="20221120 23:28:13.275" endtime="20221120 23:28:13.288"/>
 </kw>
 <kw name="Enter Username" library="LoginPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Username_Locator}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 18:00:04.990" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//input[@id='login_email']'.</msg>
-<status status="PASS" starttime="20221120 18:00:04.988" endtime="20221120 18:00:05.139"/>
+<msg timestamp="20221120 23:28:13.296" level="INFO">Typing text 'mohammed.khaled@naseej.com' into text field '//input[@id='login_email']'.</msg>
+<status status="PASS" starttime="20221120 23:28:13.296" endtime="20221120 23:28:13.527"/>
 </kw>
-<status status="PASS" starttime="20221120 18:00:04.988" endtime="20221120 18:00:05.140"/>
+<status status="PASS" starttime="20221120 23:28:13.295" endtime="20221120 23:28:13.527"/>
 </kw>
 <kw name="Enter Password" library="LoginPage">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${password_Locator}</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221120 18:00:05.141" level="INFO">Typing text 'Medad@123' into text field '//input[@id='login_password']'.</msg>
-<status status="PASS" starttime="20221120 18:00:05.140" endtime="20221120 18:00:05.228"/>
+<msg timestamp="20221120 23:28:13.527" level="INFO">Typing text 'Medad@123' into text field '//input[@id='login_password']'.</msg>
+<status status="PASS" starttime="20221120 23:28:13.527" endtime="20221120 23:28:13.651"/>
 </kw>
-<status status="PASS" starttime="20221120 18:00:05.140" endtime="20221120 18:00:05.228"/>
+<status status="PASS" starttime="20221120 23:28:13.527" endtime="20221120 23:28:13.651"/>
 </kw>
 <kw name=" Click on Login button" library="LoginPage">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Login_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221120 18:00:05.229" level="INFO">Clicking element '//button[@type='submit']'.</msg>
-<status status="PASS" starttime="20221120 18:00:05.229" endtime="20221120 18:00:05.273"/>
+<msg timestamp="20221120 23:28:13.655" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20221120 23:28:13.655" endtime="20221120 23:28:13.717"/>
 </kw>
-<status status="PASS" starttime="20221120 18:00:05.229" endtime="20221120 18:00:05.273"/>
+<status status="PASS" starttime="20221120 23:28:13.655" endtime="20221120 23:28:13.718"/>
 </kw>
 <kw name="Home page is opened Successfully" library="LoginPage">
 <kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
 <arg>${Success_Login}</arg>
 <arg>timeout=10</arg>
 <doc>Waits until the element ``locator`` appears on the current page.</doc>
-<status status="PASS" starttime="20221120 18:00:05.274" endtime="20221120 18:00:08.675"/>
+<status status="PASS" starttime="20221120 23:28:13.719" endtime="20221120 23:28:16.912"/>
 </kw>
-<status status="PASS" starttime="20221120 18:00:05.273" endtime="20221120 18:00:08.675"/>
+<status status="PASS" starttime="20221120 23:28:13.718" endtime="20221120 23:28:16.915"/>
 </kw>
-<status status="PASS" starttime="20221120 18:00:00.516" endtime="20221120 18:00:08.675"/>
+<status status="PASS" starttime="20221120 23:28:07.515" endtime="20221120 23:28:16.915"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Success_Login}</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221120 18:00:08.676" endtime="20221120 18:00:08.703"/>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Academic_Structure}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 23:28:16.915" level="INFO">Clicking element '//a[@href='/app/academic-structure']'.</msg>
+<status status="PASS" starttime="20221120 23:28:16.915" endtime="20221120 23:28:17.036"/>
 </kw>
-<status status="PASS" starttime="20221120 18:00:00.514" endtime="20221120 18:00:08.703"/>
+<status status="PASS" starttime="20221120 23:28:07.515" endtime="20221120 23:28:17.040"/>
+</kw>
+<kw name="Open the Academic Program page" library="AcademicProgramPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Academic_Program_Link}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221120 23:28:17.041" endtime="20221120 23:28:17.736"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Academic_Program_Link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 23:28:17.736" level="INFO">Clicking element '//a[@href='/app/academic-program']'.</msg>
+<status status="PASS" starttime="20221120 23:28:17.736" endtime="20221120 23:28:17.826"/>
+</kw>
+<status status="PASS" starttime="20221120 23:28:17.040" endtime="20221120 23:28:17.826"/>
+</kw>
+<kw name="Click button Add new Academic Program" library="AcademicProgramPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${Add_Academic_Program}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221120 23:28:17.826" endtime="20221120 23:28:18.536"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Add_Academic_Program}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221120 23:28:18.538" level="INFO">Clicking element '//span[@data-label='Add%20Academic%20Program']'.</msg>
+<msg timestamp="20221120 23:28:18.965" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20221120 23:28:18.965" level="FAIL">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E9ACD3+2075859]
+	Ordinal0 [0x00E2EE61+1633889]
+	Ordinal0 [0x00D2B7BD+571325]
+	Ordinal0 [0x00D2E374+582516]
+	Ordinal0 [0x00D2E225+582181]
+	Ordinal0 [0x00D2E4C0+582848]
+	Ordinal0 [0x00D6127F+791167]
+	Ordinal0 [0x00D5F0B3+782515]
+	Ordinal0 [0x00D5D0AB+774315]
+	Ordinal0 [0x00D5BD37+769335]
+	Ordinal0 [0x00D51C76+728182]
+	Ordinal0 [0x00D7731C+881436]
+	Ordinal0 [0x00D515BF+726463]
+	Ordinal0 [0x00D77534+881972]
+	Ordinal0 [0x00D8B56A+963946]
+	Ordinal0 [0x00D77136+880950]
+	Ordinal0 [0x00D4FEFD+720637]
+	Ordinal0 [0x00D50F3F+724799]
+	GetHandleVerifier [0x0114EED2+2769538]
+	GetHandleVerifier [0x01140D95+2711877]
+	GetHandleVerifier [0x00F2A03A+521194]
+	GetHandleVerifier [0x00F28DA0+516432]
+	Ordinal0 [0x00E3682C+1665068]
+	Ordinal0 [0x00E3B128+1683752]
+	Ordinal0 [0x00E3B215+1683989]
+	Ordinal0 [0x00E46484+1729668]
+	BaseThreadInitThunk [0x75647BA9+25]
+	RtlInitializeExceptionChain [0x76F4BB9B+107]
+	RtlClearBits [0x76F4BB1F+191]
+</msg>
+<status status="FAIL" starttime="20221120 23:28:18.536" endtime="20221120 23:28:18.979"/>
+</kw>
+<status status="FAIL" starttime="20221120 23:28:17.826" endtime="20221120 23:28:18.982"/>
+</kw>
+<kw name="Fill Form of Add Academic Program" library="AcademicProgramPage">
+<status status="NOT RUN" starttime="20221120 23:28:18.982" endtime="20221120 23:28:18.982"/>
+</kw>
+<kw name="Click submit Academic Program Button" library="AcademicProgramPage">
+<status status="NOT RUN" starttime="20221120 23:28:18.986" endtime="20221120 23:28:18.986"/>
+</kw>
+<status status="FAIL" starttime="20221120 23:28:07.515" endtime="20221120 23:28:18.986"/>
+</kw>
+<kw name="closing Browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221120 23:28:18.990" endtime="20221120 23:28:21.245"/>
+</kw>
+<status status="PASS" starttime="20221120 23:28:18.990" endtime="20221120 23:28:21.245"/>
+</kw>
+<status status="FAIL" starttime="20221120 23:28:07.506" endtime="20221120 23:28:21.245">StaleElementReferenceException: Message: stale element reference: element is not attached to the page document
+  (Session info: chrome=107.0.5304.107)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00E9ACD3+2075859]
+	Ordinal0 [0x00E2EE61+1633889]
+	Ordinal0 [0x00D2B7BD+571325]
+	Ordinal0 [0x00D2E374+582516]
+	Ordinal0 [0x00D2E225+582181]
+	Ordinal0 [0x00D2E4C0+582848]
+	Ordinal0 [0x00D6127F+791167]
+	Ordinal0 [0x00D5F0B3+782515]
+	Ordinal0 [0x00D5D0AB+774315]
+	Ordinal0 [0x00D5BD37+769335]
+	Ordinal0 [0x00D51C76+728182]
+	Ordinal0 [0x00D7731C+881436]
+	Ordinal0 [0x00D515BF+726463]
+	Ordinal0 [0x00D77534+881972]
+	Ordinal0 [0x00D8B56A+963946]
+	Ordinal0 [0x00D77136+880950]
+	Ordinal0 [0x00D4FEFD+720637]
+	Ordinal0 [0x00D50F3F+724799]
+	GetHandleVerifier [0x0114EED2+2769538]
+	GetHandleVerifier [0x01140D95+2711877]
+	GetHandleVerifier [0x00F2A03A+521194]
+	GetHandleVerifier [0x00F28DA0+516432]
+	Ordinal0 [0x00E3682C+1665068]
+	Ordinal0 [0x00E3B128+1683752]
+	Ordinal0 [0x00E3B215+1683989]
+	Ordinal0 [0x00E46484+1729668]
+	BaseThreadInitThunk [0x75647BA9+25]
+	RtlInitializeExceptionChain [0x76F4BB9B+107]
+	RtlClearBits [0x76F4BB1F+191]
+</status>
 </test>
 <doc>MedadCMP LoginPage</doc>
-<status status="PASS" starttime="20221120 18:00:00.155" endtime="20221120 18:00:08.705"/>
+<status status="FAIL" starttime="20221120 23:28:05.215" endtime="20221120 23:28:21.262"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Login">Login</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="AcademicStructure">AcademicStructure</stat>
 </suite>
 </statistics>
 <errors>

@@ -12,4 +12,7 @@ TC2 : Add new College
 TC3 : Add new Campuses
     Add new Campuses
 
+TC4: Add new Academic Program
+    Add new Academic Program
+
 

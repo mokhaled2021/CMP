@@ -12,7 +12,7 @@ Login To The ControlPanel
     Click on Login button 
     Home page is opened Successfully
 
-# ===================== Details for Every Step =======================
+#  Details for Every Step
 Enter Username
     Input Text       ${Username_Locator}  ${username}
 Enter Password

@@ -19,7 +19,6 @@ Click button Add new Academic Program
 Fill field Program Name 
     Input Text    ${Program_Name_Locator}     ${Program_Name}
 Fill field Program Code
-    Wait Until Page Contains Element     ${Program_Code_Locator}
     Input Text    ${Program_Code_Locator}    ${Program_Code}
 
 Select field Status 

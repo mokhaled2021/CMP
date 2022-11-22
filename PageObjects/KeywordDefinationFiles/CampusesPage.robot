@@ -16,7 +16,6 @@ Open the Cumpuses page
 Click button Add new campuses
     Wait Until Page Contains Element     ${Add_Campuses}     timeout=10
     Click Element  ${Add_Campuses}
-    
 
 Fill field Campus Name
     Wait Until Element Is Visible    /html/body/div[11]   timeout=10

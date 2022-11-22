@@ -53,7 +53,7 @@ Submit_college = "//*[@id='page-College']/div[1]/div/div/div[2]/div[3]/button[2]
 
 # Academic Program Locators
 Program_Name_Locator = "//*[@id='page-Academic Program']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[1]/form/div[2]/div/div[2]/div[1]/input"
-Program_Code_Locator  = "//input[@data-fieldname='program_code']" 
+Program_Code_Locator  = "//*[@id='page-Academic Program']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[2]/form/div/div/div[2]/div[1]/input" 
 Status_Locator  = "//Select[@data-fieldname='status']" 
 Status_Option_Locator  = "//Select[@data-fieldname='status']/option[1]"
 Major_Locator  = "//input[@data-target='Major']" 

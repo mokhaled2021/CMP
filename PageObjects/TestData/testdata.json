@@ -1,0 +1,27 @@
+{
+  "Login": {
+    "username": "mohammed.khaled@naseej.com",
+    "password": "Medad@123"
+  },
+  "Inistitutions": {
+    "Institution_Code": "KdHhn-01",
+    "Institution_Name": "MKhnhmaled",
+    "Website": "http://www.goohgle.com",
+    "Email": "test@thest.com",
+    "Location": "Tanta",
+    "MOE_Number": "15"
+  },
+  "Campuses": {
+    "Campus_name": "khaled",
+    "Campus_code": "12345",
+    "Campus_location": "data"
+  },
+  "Colleges": {
+    "College_Name": "mokhaled",
+    "College_Code": "2121"
+  },
+  "Academic_Programe": {
+    "Program_Name": "khaledno",
+    "Program_Code": "KH147"
+  }
+}

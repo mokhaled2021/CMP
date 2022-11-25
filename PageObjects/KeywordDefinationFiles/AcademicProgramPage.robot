@@ -14,13 +14,9 @@ Add new Academic Program
     Click submit Academic Program Button
 
 Click button Add new Academic Program
+    sleep  1
     Wait Until Page Contains Element     ${Add_Academic_Program}
     Click Element  ${Add_Academic_Program}
-Fill field Program Name 
-    Input Text    ${Program_Name_Locator}     ${Program_Name}
-Fill field Program Code
-    Input Text    ${Program_Code_Locator}    ${Program_Code}
-
 Select field Status 
     Click Element    ${Status_Locator}
     sleep  2
@@ -73,31 +69,20 @@ Select field Ownership
     Wait Until Page Contains Element    ${Ownership_Department_Option_Locator}    timeout=10
     Click Element    ${Ownership_Department_Option_Locator}  
 
-Fill field Institution Location
-    Input Text    ${Location_Locator}    ${Location}
-Fill field MOE Number
-    Input Text    ${MOE_Number_Locator}    ${MOE_Number}
-Select field Time Zone
-    Click Element    ${Time_Zone_Locator}
-    Wait Until Page Contains Element    ${Time_Zone_Selected}
-    Click Element    ${Time_Zone_Selected}
-Select field Date of establishment
-    Click Element    ${Date_of_establishment_Locator}
-    Wait Until Page Contains Element    ${Date_of_establishment_date}
-    Click Element    ${Date_of_establishment_date}
-
 Click submit Academic Program Button
     Wait Until Page Contains Element    ${Submit_Institution}
     Click Element    ${Submit_Institution}
     Wait Until Page Contains Element    ${Successfully_Saved}
 
 Fill Form of Add Academic Program
-    Fill field Program Name
-    Fill field Program Code
-    Select field Institutional Type
-    Fill field Website
-    Fill field Email
+    ${json} =  Get file   ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object} =  Evaluate   json.loads('''${json}''')   json
+    sleep  1
+    Input Text    ${Program_Name_Locator}     ${object[Academic_Program]["Program_Name"]}
+    sleep  1
+    Input Text    ${Program_Code_Locator}    ${object["Academic_Program"]["Program_Code"]}
+    Select field Majaor 
+    Select field Education 
+    Select field Degree 
+    Select field Scientific Certificate 
     Select field Ownership
-    Fill field Institution Location
-    Fill field MOE Number
-    Select field Time Zone

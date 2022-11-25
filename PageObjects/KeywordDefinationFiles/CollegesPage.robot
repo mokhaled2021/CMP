@@ -10,8 +10,10 @@ Add new College
     Click submit college button
 
 Fill Form of Add Colleges
-    Fill field College Name
-    Fill field College Code
+    ${json} =  Get file   ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object} =  Evaluate   json.loads('''${json}''')   json
+    Input Text    ${College_Name_Locator}   ${object["colleges"]["College_Name"]}
+    Input Text    ${College_Code_Locator}    ${object["colleges"]["College_Code"]}
     Select field Establishment Date
     Add the related Campus
 Open the Colleges page
@@ -20,10 +22,6 @@ Open the Colleges page
 Click add colleges button
     Wait Until Page Contains Element     ${Add_College}  timeout=10
     Click Element  ${Add_College}
-Fill field College Name
-    Input Text    ${College_Name_Locator}   ${College_Name}
-Fill field College Code
-    Input Text    ${College_Code_Locator}  ${College_Code}
 Select field Establishment Date
     Click Element    ${Establishment_date_Locator}
     Wait Until Page Contains Element    ${Establishment_date}

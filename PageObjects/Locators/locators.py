@@ -7,16 +7,14 @@ Institution_title = "//h3[@title='New Institution']"
 
 #  Links Locators
 Academic_Structure = "//a[@href='/app/academic-structure']"
+Admission = "//a[@href='/app/admission']"
 Institution_Link = "//a[@href='/app/institution']"
-Add_Inistitutions = "//span[@data-label='Add%20Institution']"
 Campuses_Link = "//a[@href='/app/campus']"
-Add_Campuses = "//span[@data-label='Add%20Campus']"
 College_Link =  "//a[@href='/app/college']"
-Add_College = "//span[@data-label='Add%20College']"
 Academic_Program_Link = "//a[@href='/app/academic-program']"
-Add_Academic_Program = "//span[@data-label='Add%20Academic%20Program']"
 
 # Institutions Locators 
+Add_Inistitutions = "//span[@data-label='Add%20Institution']"
 Institution_Code_Locator = "//input[@data-fieldname='institution_code']"
 Institution_Name_Locator = "//input[@data-fieldname='institution_name']"
 Institutional_Type_Locator ="//input[@data-fieldname='institutional_type']"
@@ -35,12 +33,14 @@ Submit_Institution = "//button[@data-label='Save']"
 Successfully_Saved = "//*[@id='alert-container']"
 
 # Campuses Locators 
+Add_Campuses = "//span[@data-label='Add%20Campus']"
 Campus_name_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/input"
 campus_code_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[2]/div/div[2]/div[1]/input"
 campus_location_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[3]/div/div[2]/div[1]/input"
 Submit_Campus = "/html/body/div[8]/div/div/div[3]/div[2]/button[2]"
 
 # Colleges Locators 
+Add_College = "//span[@data-label='Add%20College']"
 College_Name_Locator = "//input[@data-fieldname='college_name'][@data-doctype='College']"
 College_Code_Locator = "//input[@data-fieldname='college_code'][@data-doctype='College']"
 Establishment_date_Locator = "//input[@data-fieldname='establishment_date']"
@@ -52,6 +52,7 @@ Select_campus = "//P[@title='1']"
 Submit_college = "//*[@id='page-College']/div[1]/div/div/div[2]/div[3]/button[2]/span"
 
 # Academic Program Locators
+Add_Academic_Program = "//span[@data-label='Add%20Academic%20Program']"
 Program_Name_Locator = "//*[@id='page-Academic Program']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[1]/form/div[2]/div/div[2]/div[1]/input"
 Program_Code_Locator  = "//*[@id='page-Academic Program']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[2]/form/div/div/div[2]/div[1]/input" 
 Status_Locator  = "//Select[@data-fieldname='status']" 

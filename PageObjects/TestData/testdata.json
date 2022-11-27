@@ -5,7 +5,7 @@
   },
   "Inistitutions": {
     "Institution_Code": "KdHhn-01",
-    "Institution_Name": "MKhnhmaled",
+    "Institution_Name": "MKhaled",
     "Website": "http://www.goohgle.com",
     "Email": "test@thest.com",
     "Location": "Tanta",
@@ -17,10 +17,10 @@
     "Campus_location": "data"
   },
   "Colleges": {
-    "College_Name": "mokhaled",
-    "College_Code": "2121"
+    "College_Name": "mokhaled1",
+    "College_Code": "21211"
   },
-  "Academic_Programe": {
+  "AcademicProgram": {
     "Program_Name": "khaledno",
     "Program_Code": "KH147"
   }

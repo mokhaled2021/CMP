@@ -2,6 +2,11 @@
 Resource    ../common.robot
 
 
+*** Variables ***
+${json}=        Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+${object}=      Evaluate    json.loads('''${json}''')    json
+
+
 *** Keywords ***
 Add new Campuses
     Open the AcademicStructure page

@@ -25,7 +25,7 @@ Open the AcademicStructure page
 
 Open the Admission page
     Login To The ControlPanel
-    Click Element    ${Admission}
+    Click Element    ${Admission_Link}
 
 closing Browser
     close Browser

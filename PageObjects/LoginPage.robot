@@ -15,6 +15,8 @@ Login To The ControlPanel
 # ===================== Details for Every Step =======================
 
 Fill username & password
+    ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object} =    Evaluate    json.loads('''${json}''')    json
     Input Text    ${Username_Locator}    ${object["Login"]["username"]}
     Input Text    ${password_Locator}    ${object["Login"]["password"]}
 

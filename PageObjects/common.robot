@@ -9,8 +9,6 @@ ${site_url}     https://sis.medadstg.com
 ${login}        /#login
 ${browser}      Chrome
 #read from json file
-${json} =       Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-${object} =     Evaluate    json.loads('''${json}''')    json
 
 
 *** Keywords ***
@@ -25,7 +23,7 @@ Open the AcademicStructure page
 
 Open the Admission page
     Login To The ControlPanel
-    Click Element    ${Admission}
+    Click Element    ${Admission_Link}
 
 closing Browser
     close Browser

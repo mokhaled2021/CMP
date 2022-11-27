@@ -17,6 +17,7 @@ Add new Inistitutions
 Click button Add new Inistitutions
     Wait Until Page Contains Element    ${Add_Inistitutions}
     Click Element    ${Add_Inistitutions}
+    sleep    2
 
 Select field Institutional Type
     Click Element    ${Institutional_Type_Locator}
@@ -45,6 +46,8 @@ click submit Institution Button
     Wait Until Page Contains Element    ${Successfully_Saved}
 
 Fill Form of Add Inistitutions
+    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object}=    Evaluate    json.loads('''${json}''')    json
     Input Text    ${Institution_Code_Locator}    ${object["Inistitutions"]["Institution_Code"]}
     Input Text    ${Institution_Name_Locator}    ${object["Inistitutions"]["Institution_Name"]}
     Select field Institutional Type

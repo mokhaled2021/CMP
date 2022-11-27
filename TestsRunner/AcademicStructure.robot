@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       MedadCMP LoginPage
+Documentation       MedadCMP Academic Structure
 
 Resource            ../PageObjects/common.robot
 Resource            ../PageObjects/AcademicStructure/CampusesPage.robot
@@ -17,8 +17,5 @@ TC1 : Add new Inistitutions
 TC2 : Add new College
     Add new College
 
-TC3 : Add new Campuses
-    Add new Campuses
-
-TC4: Add new Academic Program
+TC3: Add new Academic Program
     Add new Academic Program

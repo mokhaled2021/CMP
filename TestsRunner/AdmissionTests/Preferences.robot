@@ -3,14 +3,12 @@ Documentation       MedadCMP Admission
 
 Resource            ../../PageObjects/commons/common.robot
 Resource            ../../PageObjects/AdmissionKeywords/AdmissionCalenderPage.robot
+Resource            ../../PageObjects/AdmissionKeywords/PreferencesPage.robot
 
 Test Setup          Login To The ControlPanel
 Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC1 : Add new Admission Calender
-    Add new AdmissionCalender
-
-#TC: Delete the records at Admission Calender page
-    #Delete the records at Admission Calender page
+TC1 : Add new Preferences
+    Add new Preferences

@@ -54,5 +54,5 @@ Fill Form of Add Inistitutions
     Input Text    ${Email_Locator}    ${object["Inistitutions"]["Email"]}
     Select field Ownership for Inistitutions
     Input Text    ${Location_Locator}    ${object["Inistitutions"]["Location"]}
-    Input Text    ${MOE_Number_Locator}    ${object["Inistitutions"]["MOE_Number"]}
+    Input Text    ${Moe_Number_Locator}    ${object["Inistitutions"]["MOE_Number"]}
     Select field Time Zone

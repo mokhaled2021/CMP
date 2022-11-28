@@ -15,6 +15,7 @@ Institution_Link = "//a[@href='/app/institution']"
 Campuses_Link = "//a[@href='/app/campus']"
 College_Link =  "//a[@href='/app/college']"
 Academic_Program_Link = "//a[@href='/app/academic-program']"
+Department_Link = "//a[@href='/app/department']"
 
 # Institutions Locators 
 Add_Inistitutions = "//div[@id='page-List/Institution/List']//button[@class='btn btn-primary btn-sm primary-action']"
@@ -56,6 +57,18 @@ Add_capmus_row = "//button[@class='btn btn-xs btn-secondary grid-add-row']"
 click_in_campus_row = "//*[@id='page-College']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[2]/div[2]/div/form/div/div[2]/div[2]/div[1]/div/div/div[2]"
 Select_campus = "//*[@id='awesomplete_list_23']/li[1]"
 Submit_college = "//*[@id='page-College']/div[1]/div/div/div[2]/div[3]/button[2]/span"
+
+# Department Locators
+Add_Department = "//span[@data-label='Add%20Department']"
+Department_Name_Locator = "//div[@data-fieldname='department_name']//div[@class='form-group']//input[@type='text']"
+Department_Code_Locator = "//div[@data-fieldname='department_code']//div[@class='form-group']//input[@type='text']"
+Department_External_Code = "//div[@data-fieldname='department_external_code']//input[@type='text']"
+Add_Colleges_Button = "//button[@class='btn btn-xs btn-secondary grid-add-row']"
+Colleges_College_Name_Locator = "//*[@id='page-Department']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[2]/div[2]/div/form/div/div[2]/div[2]/div[1]/div/div/div[2]"
+Colleges_College_Name_Option = "//strong[normalize-space()='College of Applied Medical Sciences']"
+Colleges_Campus_Name_Locator = "//div[@class='awesomplete']//input[@placeholder='Campus Name']"
+Colleges_Campus_Name_Option = "//*[@id='awesomplete_list_22']/li[1]/a/p"
+Submit_Department = "//div[@id='page-Department']//button[@data-label='Save']"
 
 # Academic Program Locators
 Add_Academic_Program = "//*[@id='page-List/Academic Program/List']/div[1]/div/div/div[2]/div[2]/button[2]"

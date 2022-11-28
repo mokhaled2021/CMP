@@ -20,6 +20,11 @@
     "College_Name": "mokhaledAutomation",
     "College_Code": "21211"
   },
+  "Department": {
+    "Department_name": "DepartmentAutomation",
+    "Department_code": "DepartmentAutomation",
+    "Department_external_code": "DepartmentAutomation"
+  },
   "AcademicProgram": {
     "Program_Name": "khaledAutomation",
     "Program_Code": "KH147"

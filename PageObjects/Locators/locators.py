@@ -37,10 +37,13 @@ Successfully_Saved = "//*[@id='alert-container']"
 
 # Campuses Locators 
 Add_Campuses = "//span[@data-label='Add%20Campus']"
-Campus_name_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[1]/div/div[2]/div[1]/input"
-campus_code_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[2]/div/div[2]/div[1]/input"
-campus_location_Locator = "/html/body/div[5]/div/div/div[2]/div[1]/div/div[2]/div/div/div/form/div[3]/div/div[2]/div[1]/input"
-Submit_Campus = "/html/body/div[8]/div/div/div[3]/div[2]/button[2]"
+Campus_name_Locator = "//*[@id='page-Campus']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[2]/div/div[2]/div[1]/input"
+campus_code_Locator = "//*[@id='page-Campus']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[3]/div/div[2]/div[1]/input"
+campus_location_Locator = "//div[@class='row form-section card-section visible-section']//div[@class='frappe-control input-max-width has-error']//input[@role='combobox']"
+campus_location_option = "//*[@id='awesomplete_list_8']/li[1]"
+Region_Locator = "//*[@id='page-Campus']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div/div/div/form/div[6]/div/div[2]/div[1]/div/div/input"
+Region_Option = "//*[@id='awesomplete_list_9']/li[1]" 
+Submit_Campus = "//button[@data-label='Save']"
 
 # Colleges Locators 
 Add_College = "//span[@data-label='Add%20College']"

@@ -15,7 +15,7 @@ Add new AdmissionCalender
     click submit AdmissionCalender Button
 
 Click button Add new AdmissionCalender
-    sleep    2
+    sleep    1.5
     Wait Until Page Contains Element    ${Add_AdmissionCalender}
     Click Element    ${Add_AdmissionCalender}
 

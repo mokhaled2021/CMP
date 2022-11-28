@@ -5,23 +5,23 @@
   },
   "Inistitutions": {
     "Institution_Code": "KdHhn-01",
-    "Institution_Name": "MKhaled",
+    "Institution_Name": "MKhaledAutomation",
     "Website": "http://www.goohgle.com",
     "Email": "test@thest.com",
     "Location": "Tanta",
     "MOE_Number": "15"
   },
   "Campuses": {
-    "Campus_name": "khaled",
+    "Campus_name": "khaledAutomation",
     "Campus_code": "12345",
     "Campus_location": "data"
   },
   "Colleges": {
-    "College_Name": "mokhaled1",
+    "College_Name": "mokhaledAutomation",
     "College_Code": "21211"
   },
   "AcademicProgram": {
-    "Program_Name": "khaledno",
+    "Program_Name": "khaledAutomation",
     "Program_Code": "KH147"
   }
 }

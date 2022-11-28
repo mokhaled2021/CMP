@@ -1,7 +1,7 @@
 *** Settings ***
 Library         SeleniumLibrary
 Variables       ../Locators/locators.py
-Resource        ../LoginPage.robot
+Resource        ../commons/LoginPage.robot
 
 
 *** Variables ***
@@ -20,11 +20,9 @@ Opening Browser
     Wait Until Page Contains Element    ${Username_Locator}
 
 Open the AcademicStructure page
-    Login To The ControlPanel
     Click Element    ${Academic_Structure}
 
 Open the Admission page
-    Login To The ControlPanel
     Click Element    ${Admission_Link}
 
 closing Browser

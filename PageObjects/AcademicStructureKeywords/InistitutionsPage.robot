@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../common.robot
+Resource    ../commons/common.robot
 
 
 *** Keywords ***
@@ -12,7 +12,6 @@ Add new Inistitutions
     Open the Institution page
     Click button Add new Inistitutions
     Fill Form of Add Inistitutions
-    click submit Institution Button
 
 Click button Add new Inistitutions
     Wait Until Page Contains Element    ${Add_Inistitutions}

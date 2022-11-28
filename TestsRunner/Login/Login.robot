@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       MedadCMP LoginPage
 
-Resource            ../PageObjects/common.robot
+Resource            ../../PageObjects/commons/common.robot
 
 
 *** Test Cases ***

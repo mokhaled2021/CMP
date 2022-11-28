@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../common.robot
+Resource    ../commons/common.robot
 
 
 *** Keywords ***
@@ -11,6 +11,7 @@ Add new College
     Click submit college button
 
 Fill Form of Add Colleges
+    sleep    1
     ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
     ${object} =    Evaluate    json.loads('''${json}''')    json
     Input Text    ${College_Name_Locator}    ${object["Colleges"]["College_Name"]}

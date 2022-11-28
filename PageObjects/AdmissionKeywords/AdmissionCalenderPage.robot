@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../common.robot
+Resource    ../commons/common.robot
 
 
 *** Keywords ***
@@ -48,6 +48,20 @@ click submit AdmissionCalender Button
     Click Element    ${Submit_AdmissionCalender}
     Wait Until Page Contains Element    ${Successfully_Saved}
     sleep    1
+
+Delete the records at Admission Calender page
+    Open the Admission page
+    Open the AdmissionCalender page
+    sleep    2
+    Wait Until Page Contains Element    ${SelectAllRecords}
+    Select Checkbox    ${SelectAllRecords}
+    Wait Until Element Is Visible    ${ActionsButton}
+    Click Element    ${ActionsButton}
+    sleep    2
+    Wait Until Page Contains Element    ${DeleteAction}
+    Click Element    ${DeleteAction}
+    sleep    2
+    Press Keys    ${DeleteActionYes}    ENTER
 
 Fill Form of Add AdmissionCalender
     ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json

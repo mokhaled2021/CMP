@@ -104,3 +104,7 @@ Preference_Start_Date = "//div[@id='datepickers-container']/div[2]/div[1]/div[1]
 Preference_End_Date_Locator = "//input[@data-fieldname='capacity_end_date']"
 Preference_End_Date = "//*[@id='datepickers-container']/div[3]/div[1]/div/div[2]/div[32]"
 Submit_AdmissionCalender = "//*[@id='page-Admission Calendar']/div[1]/div/div/div[2]/div[3]/button[2]"
+SelectAllRecords = "//*[@id='page-List/Admission Calendar/List']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div[1]/header/div[1]/div[1]/input"
+ActionsButton = "//*[@id='page-List/Admission Calendar/List']/div[1]/div/div/div[2]/div[2]/div[2]/button"
+DeleteAction = "//*[@id='page-List/Admission Calendar/List']/div[1]/div/div/div[2]/div[2]/div[2]/ul/li[6]"
+DeleteActionYes= "//div[contains(@class,'modal fade show')]//button[contains(@type,'button')][normalize-space()='Yes']"

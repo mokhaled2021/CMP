@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../common.robot
+Resource    ../commons/common.robot
 
 
 *** Variables ***
@@ -20,7 +20,9 @@ Open the Cumpuses page
     Click Element    ${Campuses_Link}
 
 Fill field campus name
-    Wait Until Element Is Enabled    /html/body/div[11]    timeout=10
+    ${element1} =    Get Webelement
+    ...    //div[@data-fieldname='campus_name']//div[@class='form-group']//input[@type='text']
+    Execute Javascript    arguments[0]click();    ARGUMENTS    ${element1}
     Input Text    ${Campus_name_Locator}    ${object["campuses"]["Campus_name"]}
 
 Fill field campus code

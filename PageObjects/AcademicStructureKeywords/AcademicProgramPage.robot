@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../common.robot
+Resource    ../commons/common.robot
 
 
 *** Keywords ***
@@ -14,8 +14,26 @@ Add new Academic Program
     Fill Form of Add Academic Program
     Click submit Academic Program Button
 
-Click button Add new Academic Program
+Fill Form of Add Academic Program
+    ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object} =    Evaluate    json.loads('''${json}''')    json
     sleep    1
+    Input Text    ${Program_Name_Locator}    ${object["AcademicProgram"]["Program_Name"]}
+    sleep    1
+    Input Text    ${Program_Code_Locator}    ${object["AcademicProgram"]["Program_Code"]}
+    Select field Majaor
+    Select field Education
+    Select field Degree
+    Select field Scientific Certificate
+    Select field Ownership
+    Select the Academic Program Gender
+    Fill Total Credit Hours
+    Fill Current capacity
+    Fill myField
+    Select Camp
+
+Click button Add new Academic Program
+    sleep    2
     Wait Until Page Contains Element    ${Add_Academic_Program}
     Click Element    ${Add_Academic_Program}
 
@@ -94,7 +112,7 @@ Select Camp
     Click Element    ${Web_View_Section_Camp_Locator}
     sleep    2
     Input Text    ${Web_View_Section_Camp_Locator}    Arar
-    sleep    1
+    sleep    2
     Press Keys    ${Web_View_Section_Camp_Locator}    ENTER
 
 Click submit Academic Program Button
@@ -102,20 +120,3 @@ Click submit Academic Program Button
     Click Element    ${Submit_Institution}
     Wait Until Page Contains Element    ${Successfully_Saved}
     Sleep    1
-
-Fill Form of Add Academic Program
-    ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-    ${object} =    Evaluate    json.loads('''${json}''')    json
-    Input Text    ${Program_Name_Locator}    ${object["AcademicProgram"]["Program_Name"]}
-    sleep    1
-    Input Text    ${Program_Code_Locator}    ${object["AcademicProgram"]["Program_Code"]}
-    Select field Majaor
-    Select field Education
-    Select field Degree
-    Select field Scientific Certificate
-    Select field Ownership
-    Select the Academic Program Gender
-    Fill Total Credit Hours
-    Fill Current capacity
-    Fill myField
-    Select Camp

@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../PageObjects/common.robot
+Resource    ../commons/common.robot
 Library     OperatingSystem
 
 

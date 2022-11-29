@@ -64,5 +64,3 @@ Fill Form of Add Preferences
 click submit Preferences Button
     Wait Until Page Contains Element    ${Preference_Submit_button}
     Click Element    ${Preference_Submit_button}
-    Wait Until Page Contains Element    ${Successfully_Saved}
-    sleep    1

@@ -9,5 +9,6 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC3: Add new Academic Program
+TC: Add new Academic Program
     Add new Academic Program
+    Successfully Messages Should Appear

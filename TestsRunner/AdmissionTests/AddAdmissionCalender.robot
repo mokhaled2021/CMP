@@ -9,7 +9,7 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC1 : Add new Admission Calender
+TC: Add new Admission Calender
     Add new AdmissionCalender
 
 #TC: Delete the records at Admission Calender page

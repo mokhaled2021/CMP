@@ -43,5 +43,3 @@ Select field College
 
 Click submit Department button
     Click Element    ${Submit_Department}
-    sleep    2
-    Wait Until Page Contains Element    ${Successfully_Saved}

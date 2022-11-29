@@ -25,5 +25,10 @@ Open the AcademicStructure page
 Open the Admission page
     Click Element    ${Admission_Link}
 
+Successfully Messages Appears After Submitting
+    Sleep    2
+    Wait Until Page Contains Element    ${Successfully_Saved}
+    Sleep    1
+
 closing Browser
     close Browser

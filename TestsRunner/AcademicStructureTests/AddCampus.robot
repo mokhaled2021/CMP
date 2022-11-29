@@ -9,5 +9,5 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC2 : Add new Campus
+TC : Add new Campus
     Add new Campuses

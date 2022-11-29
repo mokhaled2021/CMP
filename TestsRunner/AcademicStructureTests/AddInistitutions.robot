@@ -9,9 +9,9 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC1 : Add new Inistitutions
+TC: Add new Inistitutions
     Add new Inistitutions
     click submit Institution Button
 
-TC2: Validate the duplication
+TC: Validate the duplication
     Add new Inistitutions

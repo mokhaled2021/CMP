@@ -46,8 +46,6 @@ Select Active & Published End Date
 click submit AdmissionCalender Button
     Wait Until Page Contains Element    ${Submit_AdmissionCalender}
     Click Element    ${Submit_AdmissionCalender}
-    Wait Until Page Contains Element    ${Successfully_Saved}
-    sleep    1
 
 Delete the records at Admission Calender page
     Open the Admission page

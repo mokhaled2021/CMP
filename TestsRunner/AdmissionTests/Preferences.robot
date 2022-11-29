@@ -10,5 +10,5 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC1 : Add new Preferences
+TC: Add new Preferences
     Add new Preferences

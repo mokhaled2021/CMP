@@ -12,6 +12,7 @@ Add new Inistitutions
     Open the Institution page
     Click button Add new Inistitutions
     Fill Form of Add Inistitutions
+    click submit Institution Button
 
 Click button Add new Inistitutions
     Wait Until Page Contains Element    ${Add_Inistitutions}
@@ -42,7 +43,6 @@ Select field Date of establishment
 click submit Institution Button
     Wait Until Page Contains Element    ${Submit_Institution}
     Click Element    ${Submit_Institution}
-    Wait Until Page Contains Element    ${Successfully_Saved}
 
 Fill Form of Add Inistitutions
     ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json

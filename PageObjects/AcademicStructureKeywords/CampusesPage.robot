@@ -55,8 +55,6 @@ Click on button Edit Full Form
 click submit Campus
     Wait Until Page Contains Element    ${Submit_Campus}
     Click Element    ${Submit_Campus}
-    sleep    2
-    Wait Until Page Contains Element    ${Successfully_Saved}
 
 Fill Form of Add campuses
     Fill field campus name

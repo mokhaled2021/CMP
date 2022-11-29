@@ -9,5 +9,5 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC2 : Add new Department
+TC: Add new Department
     Add new Department

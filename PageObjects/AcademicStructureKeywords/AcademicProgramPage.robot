@@ -118,5 +118,3 @@ Select Camp
 Click submit Academic Program Button
     Wait Until Page Contains Element    ${Submit_Institution}
     Click Element    ${Submit_Institution}
-    Wait Until Page Contains Element    ${Successfully_Saved}
-    Sleep    1

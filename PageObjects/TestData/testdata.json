@@ -3,19 +3,36 @@
     "username": "mohammed.khaled@naseej.com",
     "password": "Medad@123"
   },
-  "Inistitutions": {
-    "Institution_Code": "KdHhn-01",
-    "Institution_Name": "MKhaledAutomation",
-    "Website": "http://www.goohgle.com",
-    "Email": "test@thest.com",
-    "Location": "Tanta",
-    "MOE_Number": "15"
-  },
-  "Campuses": {
-    "Campus_name": "khaledAutomation",
-    "Campus_code": "12345",
-    "Campus_location": "data"
-  },
+  "Inistitutions": [
+    {
+      "Institution_Code": "KdHhn-01",
+      "Institution_Name": "MKhaledAutomation",
+      "Website": "http://www.goohgle.com",
+      "Email": "test@thest.com",
+      "Location": "Tanta",
+      "MOE_Number": "15"
+    },
+    {
+      "Institution_Code": "KdHhn-02",
+      "Institution_Name": "MKhaledAutomation2",
+      "Website": "http://www.goohgle.com",
+      "Email": "test@thest.com",
+      "Location": "Tanta",
+      "MOE_Number": "15"
+    }
+  ],
+  "Campuses": [
+    {
+      "Campus_name": "khaledAutomation",
+      "Campus_code": "12345",
+      "Campus_location": "data"
+    },
+    {
+      "Campus_name": "khaledAutomation",
+      "Campus_code": "12345",
+      "Campus_location": "data"
+    }
+  ],
   "Colleges": {
     "College_Name": "mokhaledAutomation",
     "College_Code": "21211"

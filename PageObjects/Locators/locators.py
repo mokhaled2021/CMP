@@ -149,3 +149,18 @@ Preference_Capacity_Locator = "//*[@id='page-Preference']/div[2]/div[2]/div/div[
 Preference_Active_checkBox = "//*[@id='page-Preference']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[1]/form/div[9]/div/label/span[1]/input"
 Preference_Published_checkBox = "//*[@id='page-Preference']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[1]/form/div[10]/div/label/span[1]/input"
 Preference_Submit_button = "//button[contains(@data-label,'Save')]"
+
+# Application Model Locators
+ApplicationModel_Link ="//span[normalize-space()='Application Model']"
+Add_ApplicationModel_Button = "//span[@data-label='Add%20Application%20Model']"
+AdmissionTerrm_Locator = "//div[@data-fieldname='admission_term']//div[@class='form-group']//input[@role='combobox']"
+AdmissionTerm_Option = "//span[normalize-space()='Second Semester 2021-2022']"
+Application_Locator = "//div[@data-fieldname='application']//div[@class='form-group']//input[@role='combobox']"
+Appplication_Option = "//*[@id='awesomplete_list_7']/li[11]"
+Application_StartDate_Locator = "//input[@data-fieldname='start_date']"
+Application_EndDate_Locator = "//input[@data-fieldname='end_date']"
+Application_Gender = "//div[contains(@data-fieldname,'gender')]//select[contains(@type,'text')]"
+Application_Gender_Male = "//option[@value='Male']"
+Open_OfferdProgram_collapse = ""
+Add_OfferedProgram_row = ""
+Application_AcademicProgram = ""

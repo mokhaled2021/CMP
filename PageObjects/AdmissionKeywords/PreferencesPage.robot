@@ -19,7 +19,7 @@ Click button Add new Preferences
     Wait Until Page Contains Element    ${Add_Preferences_Button}
     Click Element    ${Add_Preferences_Button}
 
-Selecet the Academic Term
+Select the Academic Term
     Press Keys    ${Preference_Academic_Term_Locator}    CTRL+a    BACKSPACE
     sleep    1
     Click Element    ${Preference_Academic_Term_Locator}
@@ -52,7 +52,7 @@ Select Published Preference
 Fill Form of Add Preferences
     ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
     ${object}=    Evaluate    json.loads('''${json}''')    json
-    Selecet the Academic Term
+    Select the Academic Term
     Input Text    ${Preference_Discription_Locator}    123dswd
     Select the Academic Program
     Select the campus

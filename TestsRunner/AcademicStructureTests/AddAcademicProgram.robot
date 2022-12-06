@@ -11,4 +11,4 @@ Test Teardown       closing Browser
 *** Test Cases ***
 TC: Add new Academic Program
     Add new Academic Program
-    Successfully Messages Should Appear
+    Successfully Messages Should Appears

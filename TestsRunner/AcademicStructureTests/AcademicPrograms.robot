@@ -9,6 +9,8 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC: Add new Academic Program
-    Add new Academic Program
-    Successfully Messages Should Appears
+Create an Academic Program
+    Navigate to Add Academic Program
+    Fill out Academic Program Details
+    Submit Academic Program Form
+    Successfully Messages Appears After Submitting

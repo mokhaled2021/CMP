@@ -9,13 +9,20 @@ ${object}=      Evaluate    json.loads('''${json}''')    json
 
 
 *** Keywords ***
-Add new Campuses
+Navigate to Add Campuses
     Open the AcademicStructure page
     Open the Cumpuses page
     Click button Add new campuses
+
+Fill out campuses Details
     Click on button Edit Full Form
-    Fill Form of Add campuses
-    click submit Campus
+    Fill field campus name
+    Fill field campus code
+    Fill field campus location
+
+Submit Campus Form
+    Wait Until Page Contains Element    ${Submit_Campus}
+    Click Element    ${Submit_Campus}
 
 Open the Cumpuses page
     Wait Until Page Contains Element    ${Campuses_Link}
@@ -51,12 +58,3 @@ Click on button Edit Full Form
     ...    //div[@class='modal fade show']//button[contains(@class,'btn btn-secondary btn-sm')][normalize-space()='Edit Full Form']
     ...    ENTER
     sleep    1
-
-click submit Campus
-    Wait Until Page Contains Element    ${Submit_Campus}
-    Click Element    ${Submit_Campus}
-
-Fill Form of Add campuses
-    Fill field campus name
-    Fill field campus code
-    Fill field campus location

@@ -7,17 +7,16 @@ Open the ApplicationModel page
     Wait Until Page Contains Element    ${ApplicationModel_Link}
     Click Element    ${ApplicationModel_Link}
 
-Add new Application Model
+Navigate to Add Application Model
     Open the Admission page
     Open the ApplicationModel page
     Click button Add new ApplicationModel
-    Fill Form of Add ApplicationModel
-    sleep    3
 
 Click button Add new ApplicationModel
     sleep    2
     Wait Until Page Contains Element    ${Add_ApplicationModel_Button}
     Click Element    ${Add_ApplicationModel_Button}
+    sleep    1
 
 Select the Admission Term
     Press Keys    ${AdmissionTerrm_Locator}    CTRL+a    BACKSPACE
@@ -37,14 +36,14 @@ Select the Application
 Select Application Start Date
     Click Element    ${Application_StartDate_Locator}
     sleep    1
-    Input Text    ${Application_StartDate_Locator}    20-11-2022
+    Input Text    ${Application_StartDate_Locator}    20-11-2022 00:00:00
     Press Keys    ${Application_StartDate_Locator}    ENTER
     sleep    0.5
 
 Select Application End Date
     Click Element    ${Application_EndDate_Locator}
     sleep    1
-    Input Text    ${Application_EndDate_Locator}    30-11-2022
+    Input Text    ${Application_EndDate_Locator}    30-11-2022 00:00:00
     Press Keys    ${Application_EndDate_Locator}    ENTER
     Sleep    0.5
 
@@ -66,13 +65,13 @@ Add the Offered Program
     sleep    1
     Press Keys    //input[@placeholder='Campus Name']    ENTER
 
-Fill Form of Add ApplicationModel
+Fill out Application Model Details
     Select the Admission Term
     Select the Application
     Select Application Start Date
     Select Application End Date
     Select the Application Gender
 
-click submit ApplicationModel Button
+Submit Application Model Form
     Wait Until Page Contains Element    ${Preference_Submit_button}
     Click Element    ${Preference_Submit_button}

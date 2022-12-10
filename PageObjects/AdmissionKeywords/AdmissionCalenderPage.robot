@@ -1,18 +1,29 @@
 *** Settings ***
 Resource    ../commons/common.robot
+Resource    ../AcademicStructureKeywords/CollegesPage.robot
 
 
 *** Keywords ***
-Open the Admission Calender page
-    Wait Until Page Contains Element    ${admission_Calender_Link}
-    Click Element    ${admission_Calender_Link}
-
-Add new AdmissionCalender
+Navigate to Add Admission calender
     Open the Admission page
     Open the AdmissionCalender page
     Click button Add new AdmissionCalender
-    Fill Form of Add AdmissionCalender
-    click submit AdmissionCalender Button
+
+Fill out Admission calender Details
+    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object}=    Evaluate    json.loads('''${json}''')    json
+    Select field Academic Term for Admission Calender
+    Select active Admission Calender
+    Select Active & Published Start Date
+    Select Active & Published End Date
+
+Submit Admission Calender Form
+    Wait Until Page Contains Element    ${Submit_AdmissionCalender}
+    Click Element    ${Submit_AdmissionCalender}
+
+Open the Admission Calender page
+    Wait Until Page Contains Element    ${admission_Calender_Link}
+    Click Element    ${admission_Calender_Link}
 
 Click button Add new AdmissionCalender
     sleep    1.5
@@ -43,10 +54,6 @@ Select Active & Published End Date
     Press Keys    ${Preference_End_Date_Locator}    ENTER
     sleep    1
 
-click submit AdmissionCalender Button
-    Wait Until Page Contains Element    ${Submit_AdmissionCalender}
-    Click Element    ${Submit_AdmissionCalender}
-
 Delete the records at Admission Calender page
     Open the Admission page
     Open the AdmissionCalender page
@@ -60,11 +67,3 @@ Delete the records at Admission Calender page
     Click Element    ${DeleteAction}
     sleep    2
     Press Keys    ${DeleteActionYes}    ENTER
-
-Fill Form of Add AdmissionCalender
-    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-    ${object}=    Evaluate    json.loads('''${json}''')    json
-    Select field Academic Term for Admission Calender
-    Select active Admission Calender
-    Select Active & Published Start Date
-    Select Active & Published End Date

@@ -3,20 +3,18 @@ Resource    ../commons/common.robot
 
 
 *** Keywords ***
-Add new Department
+Navigate to Add Department
     Open the AcademicStructure page
     Open the Department page
     Click add Department button
-    Fill Form of Add Department
-    Select field College
-    Click submit Department button
 
-Fill Form of Add Department
+Fill out Department Details
     ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
     ${object} =    Evaluate    json.loads('''${json}''')    json
     Input Text    ${Department_Name_Locator}    ${object["Department"]["Department_name"]}
     Input Text    ${Department_Code_Locator}    ${object["Department"]["Department_code"]}
     Input Text    ${Department_External_Code}    ${object["Department"]["Department_external_code"]}
+    Select field College
 
 Open the Department page
     Wait Until Page Contains Element    ${Department_Link}
@@ -41,5 +39,5 @@ Select field College
     Press Keys    ${Colleges_Campus_Name_Locator}    ENTER
     sleep    1
 
-Click submit Department button
+Submit Department Form
     Click Element    ${Submit_Department}

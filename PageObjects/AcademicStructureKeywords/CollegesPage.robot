@@ -3,14 +3,12 @@ Resource    ../commons/common.robot
 
 
 *** Keywords ***
-Add new College
+Navigate to Add College
     Open the AcademicStructure page
     Open the Colleges page
     Click add colleges button
-    Fill Form of Add Colleges
-    Click submit college button
 
-Fill Form of Add Colleges
+Fill out Colleges Details
     sleep    1
     ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
     ${object} =    Evaluate    json.loads('''${json}''')    json
@@ -43,7 +41,7 @@ Add the related Campus
     sleep    1
     Press Keys    //input[@placeholder='Campus Name']    ENTER
 
-Click submit college button
+Submit College Form
     Click Element    ${Submit_college}
     sleep    2
     Wait Until Page Contains Element    ${Successfully_Saved}

@@ -3,21 +3,36 @@ Resource    ../commons/common.robot
 
 
 *** Keywords ***
-Open the Institution page
-    Wait Until Page Contains Element    ${Institution_Link}
-    Click Element    ${Institution_Link}
-
-Add new Inistitutions
+Navigate to Add Inistitutions
     Open the AcademicStructure page
     Open the Institution page
     Click button Add new Inistitutions
-    Fill Form of Add Inistitutions
-    click submit Institution Button
+
+Fill out Inistitutions Details
+    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object}=    Evaluate    json.loads('''${json}''')    json
+    Input Text    ${Institution_Code_Locator}    ${object["Inistitutions"]["Institution_Code"]}
+    Input Text    ${Institution_Name_Locator}    ${object["Inistitutions"]["Institution_Name"]}
+    Select field Institutional Type
+    Input Text    ${Website_Locator}    ${object["Inistitutions"]["Website"]}
+    Input Text    ${Email_Locator}    ${object["Inistitutions"]["Email"]}
+    Select field Ownership for Inistitutions
+    Input Text    ${Location_Locator}    ${object["Inistitutions"]["Location"]}
+    Input Text    ${Moe_Number_Locator}    ${object["Inistitutions"]["MOE_Number"]}
+    Select field Time Zone
+
+Submit Inistitution Form
+    Wait Until Page Contains Element    ${Submit_Institution}
+    Click Element    ${Submit_Institution}
 
 Click button Add new Inistitutions
     Wait Until Page Contains Element    ${Add_Inistitutions}
     Click Element    ${Add_Inistitutions}
     sleep    2
+
+Open the Institution page
+    Wait Until Page Contains Element    ${Institution_Link}
+    Click Element    ${Institution_Link}
 
 Select field Institutional Type
     Click Element    ${Institutional_Type_Locator}
@@ -39,20 +54,3 @@ Select field Date of establishment
     Click Element    ${Date_of_establishment_Locator}
     Wait Until Page Contains Element    ${Date_of_establishment_date}
     Click Element    ${Date_of_establishment_date}
-
-click submit Institution Button
-    Wait Until Page Contains Element    ${Submit_Institution}
-    Click Element    ${Submit_Institution}
-
-Fill Form of Add Inistitutions
-    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-    ${object}=    Evaluate    json.loads('''${json}''')    json
-    Input Text    ${Institution_Code_Locator}    ${object["Inistitutions"]["Institution_Code"]}
-    Input Text    ${Institution_Name_Locator}    ${object["Inistitutions"]["Institution_Name"]}
-    Select field Institutional Type
-    Input Text    ${Website_Locator}    ${object["Inistitutions"]["Website"]}
-    Input Text    ${Email_Locator}    ${object["Inistitutions"]["Email"]}
-    Select field Ownership for Inistitutions
-    Input Text    ${Location_Locator}    ${object["Inistitutions"]["Location"]}
-    Input Text    ${Moe_Number_Locator}    ${object["Inistitutions"]["MOE_Number"]}
-    Select field Time Zone

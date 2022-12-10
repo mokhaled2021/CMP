@@ -7,14 +7,12 @@ Open the Academic Program page
     Wait Until Page Contains Element    ${Academic_Program_Link}
     Click Element    ${Academic_Program_Link}
 
-Add new Academic Program
+Navigate to Add Academic Program
     Open the AcademicStructure page
     Open the Academic Program page
     Click button Add new Academic Program
-    Fill Form of Add Academic Program
-    Click submit Academic Program Button
 
-Fill Form of Add Academic Program
+Fill out Academic Program Details
     ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
     ${object} =    Evaluate    json.loads('''${json}''')    json
     sleep    1
@@ -115,6 +113,6 @@ Select Camp
     sleep    2
     Press Keys    ${Web_View_Section_Camp_Locator}    ENTER
 
-Click submit Academic Program Button
+Submit Academic Program Form
     Wait Until Page Contains Element    ${Submit_Institution}
     Click Element    ${Submit_Institution}

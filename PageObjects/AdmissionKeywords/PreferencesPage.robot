@@ -3,16 +3,31 @@ Resource    ../commons/common.robot
 
 
 *** Keywords ***
-Open the Preferences page
-    Wait Until Page Contains Element    ${Preferences_Link}
-    Click Element    ${Preferences_Link}
-
-Add new Preferences
+Navigate to Add Preferences
     Open the Admission page
     Open the Preferences page
     Click button Add new Preferences
-    Fill Form of Add Preferences
-    click submit Preferences Button
+
+Fill out Preferences Details
+    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object}=    Evaluate    json.loads('''${json}''')    json
+    Select the Academic Term
+    Input Text    ${Preference_Discription_Locator}    123dswd
+    Select the Academic Program
+    Select the campus
+    sleep    3
+    Wait Until Page Contains Element    ${Preference_Capacity_Locator}
+    ##Input Text    ${Preference_Capacity_Locator}    123
+    #Select Active Preference
+    #Select Published Preference
+
+Submit Preferences Form
+    Wait Until Page Contains Element    ${Preference_Submit_button}
+    Click Element    ${Preference_Submit_button}
+
+Open the Preferences page
+    Wait Until Page Contains Element    ${Preferences_Link}
+    Click Element    ${Preferences_Link}
 
 Click button Add new Preferences
     sleep    2
@@ -48,19 +63,3 @@ Select Published Preference
     Sleep    1
     Select Checkbox    ${Preference_Published_checkBox}
     sleep    1
-
-Fill Form of Add Preferences
-    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-    ${object}=    Evaluate    json.loads('''${json}''')    json
-    Select the Academic Term
-    Input Text    ${Preference_Discription_Locator}    123dswd
-    Select the Academic Program
-    Select the campus
-    sleep    1
-    Input Text    ${Preference_Capacity_Locator}    123
-    Select Active Preference
-    Select Published Preference
-
-click submit Preferences Button
-    Wait Until Page Contains Element    ${Preference_Submit_button}
-    Click Element    ${Preference_Submit_button}

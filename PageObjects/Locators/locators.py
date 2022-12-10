@@ -2,7 +2,7 @@
 Username_Locator = "//input[@id='login_email']"
 password_Locator = "//input[@id='login_password']"
 Login_Button = "//button[@type='submit']"
-Success_Login = "//input[@id='navbar-search']"
+Success_Login = "//*[@id='page-Workspaces']/div[1]/div"
 
 #  Links Locators
 Academic_Structure = "//a[@href='/app/academic-structure']"
@@ -145,7 +145,7 @@ Preference_AcademicProgram_Locator = "//div[contains(@data-fieldname,'academic_p
 Preference_AcademicProgram_Option = "//*[@id='awesomplete_list_14']/li[1]"
 Preference_Gender = "//div[@data-fieldname='gender']//div[@class='form-group']//select[@type='text']"
 Preference_Gender_All= "//div[contains(@data-fieldname,'gender')]//div[contains(@class,'form-group')]//select[contains(@type,'text')]/option[1]"
-Preference_Capacity_Locator = "//*[@id='page-Preference']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[2]/form/div[4]/div/div[2]/div[1]/input"
+Preference_Capacity_Locator = "//div[@data-fieldname='capacity']//div[@class='form-group']//input[@type='text']"
 Preference_Active_checkBox = "//*[@id='page-Preference']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[1]/form/div[9]/div/label/span[1]/input"
 Preference_Published_checkBox = "//*[@id='page-Preference']/div[2]/div[2]/div/div[3]/div[2]/div[1]/div[2]/div/div/div[3]/div[1]/div/div[1]/form/div[10]/div/label/span[1]/input"
 Preference_Submit_button = "//button[contains(@data-label,'Save')]"

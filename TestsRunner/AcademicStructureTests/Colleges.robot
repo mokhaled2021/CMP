@@ -9,5 +9,8 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC: Add new College
-    Add new College
+Create a College
+    Navigate to Add College
+    Fill out Colleges Details
+    Submit College Form
+    Successfully Messages Appears After Submitting

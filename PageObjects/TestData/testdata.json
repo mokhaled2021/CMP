@@ -11,18 +11,11 @@
     "Location": "Tanta",
     "MOE_Number": "15"
   },
-  "Campuses": [
-    {
-      "Campus_name": "khaledAutomation",
-      "Campus_code": "12345",
-      "Campus_location": "data"
-    },
-    {
-      "Campus_name": "khaledAutomation2",
-      "Campus_code": "12345",
-      "Campus_location": "data"
-    }
-  ],
+  "Campuses": {
+    "Campus_name": "khaledAutomation",
+    "Campus_code": "12345",
+    "Campus_location": "data"
+  },
   "Colleges": {
     "College_Name": "mokhaledAutomation3",
     "College_Code": "21211"

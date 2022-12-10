@@ -9,5 +9,8 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC: Add new Department
-    Add new Department
+Create a Department
+    Navigate to Add Department
+    Fill out Department Details
+    Submit Department Form
+    Successfully Messages Appears After Submitting

@@ -9,8 +9,8 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC: Add new Application Model
-    Add new Application Model
-
-#TC: Delete the records at Admission Calender page
-    #Delete the records at Admission Calender page
+Create an Application Model
+    Navigate to Add Application Model
+    Fill out Application Model Details
+    Submit Application Model Form
+    Successfully Messages Appears After Submitting

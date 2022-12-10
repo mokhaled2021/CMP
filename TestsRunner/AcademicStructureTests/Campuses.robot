@@ -9,5 +9,8 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC : Add new Campus
-    Add new Campuses
+Create a Campus
+    Navigate to Add Campuses
+    Fill out campuses Details
+    Submit Campus Form
+    Successfully Messages Appears After Submitting

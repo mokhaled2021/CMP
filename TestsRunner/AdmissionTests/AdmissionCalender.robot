@@ -9,8 +9,11 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC: Add new Admission Calender
-    Add new AdmissionCalender
+Create an Admission Calender
+    Navigate to Add Admission calender
+    Fill out Admission calender Details
+    Submit Admission Calender Form
+    Successfully Messages Appears After Submitting
 
-#TC: Delete the records at Admission Calender page
+#Delete the records at Admission Calender page
     #Delete the records at Admission Calender page

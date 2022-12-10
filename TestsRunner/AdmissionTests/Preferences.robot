@@ -9,5 +9,8 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-TC: Add new Preferences
-    Add new Preferences
+Create a Preferences
+    Navigate to Add Preferences
+    Fill out Preferences Details
+    Submit Preferences Form
+    Successfully Messages Appears After Submitting

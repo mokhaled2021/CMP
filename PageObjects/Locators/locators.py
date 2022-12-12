@@ -112,8 +112,6 @@ Web_View_Section_Camp_Locator = "//div[@data-fieldname='camp']//input[@role='com
 Web_View_Section_Camp = "//*[@id='awesomplete_list_19']/li[2]"
 
 
-
-
 ### Admission pages Locators ###
 #  
 #

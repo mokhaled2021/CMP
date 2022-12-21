@@ -3,14 +3,25 @@ Resource    ../commons/common.robot
 
 
 *** Keywords ***
-Open the ApplicationModel page
-    Wait Until Page Contains Element    ${ApplicationModel_Link}
-    Click Element    ${ApplicationModel_Link}
-
 Navigate to Add Application Model
     Open the Admission page
     Open the ApplicationModel page
     Click button Add new ApplicationModel
+
+Fill out Application Model Details
+    Select the Admission Term
+    Select the Application
+    Select Application Start Date
+    Select Application End Date
+    Select the Application Gender
+
+Submit Application Model Form
+    Wait Until Page Contains Element    ${Preference_Submit_button}
+    Click Element    ${Preference_Submit_button}
+
+Open the ApplicationModel page
+    Wait Until Page Contains Element    ${ApplicationModel_Link}
+    Click Element    ${ApplicationModel_Link}
 
 Click button Add new ApplicationModel
     sleep    2
@@ -64,14 +75,3 @@ Add the Offered Program
     Input Text    //input[@placeholder='Campus Name']    Helwan
     sleep    1
     Press Keys    //input[@placeholder='Campus Name']    ENTER
-
-Fill out Application Model Details
-    Select the Admission Term
-    Select the Application
-    Select Application Start Date
-    Select Application End Date
-    Select the Application Gender
-
-Submit Application Model Form
-    Wait Until Page Contains Element    ${Preference_Submit_button}
-    Click Element    ${Preference_Submit_button}

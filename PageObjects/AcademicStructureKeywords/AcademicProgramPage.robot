@@ -2,6 +2,12 @@
 Resource    ../commons/common.robot
 
 
+*** Variables ***
+#read from json file
+${json}=        Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+${object}=      Evaluate    json.loads('''${json}''')    json
+
+
 *** Keywords ***
 Open the Academic Program page
     Wait Until Page Contains Element    ${Academic_Program_Link}

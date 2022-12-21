@@ -2,6 +2,10 @@
 Resource    ../commons/common.robot
 
 
+*** Variables ***
+${base_URL}     https://cmp-test.medadstg.com/
+
+
 *** Keywords ***
 Navigate to Add Department
     Open the AcademicStructure page
@@ -9,8 +13,8 @@ Navigate to Add Department
     Click add Department button
 
 Fill out Department Details
-    ${json} =    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-    ${object} =    Evaluate    json.loads('''${json}''')    json
+    ${json}=    Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
+    ${object}=    Evaluate    json.loads('''${json}''')    json
     Input Text    ${Department_Name_Locator}    ${object["Department"]["Department_name"]}
     Input Text    ${Department_Code_Locator}    ${object["Department"]["Department_code"]}
     Input Text    ${Department_External_Code}    ${object["Department"]["Department_external_code"]}
@@ -41,3 +45,11 @@ Select field College
 
 Submit Department Form
     Click Element    ${Submit_Department}
+
+Delete Department By API
+    ${authorization}=    Create List    d969e59bcd0761b    30c81a805de0ef7
+    Create Session    DeleteDepartmnet    ${base_URL}    auth=${authorization}
+    ${headers}=    Create Dictionary    Content-Type=application/json
+    ${response}=    DELETE On Session    DeleteDepartmnet    /api/resource/Department/dep1    headers=${headers}
+    ${status}=    Convert To String    ${response.status_code}
+    Should Be Equal    ${status}    202

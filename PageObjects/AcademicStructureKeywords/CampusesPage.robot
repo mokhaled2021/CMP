@@ -1,11 +1,5 @@
 *** Settings ***
 Resource    ../commons/common.robot
-Library     RPA.Dialogs
-
-
-*** Variables ***
-${json}=        Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-${object}=      Evaluate    json.loads('''${json}''')    json
 
 
 *** Keywords ***

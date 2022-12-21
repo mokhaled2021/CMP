@@ -17,11 +17,11 @@
     "Campus_location": "data"
   },
   "Colleges": {
-    "College_Name": "mokhaledAutomation3",
+    "College_Name": "col1",
     "College_Code": "21211"
   },
   "Department": {
-    "Department_name": "DepartmentAutomation",
+    "Department_name": "dep1",
     "Department_code": "DepartmentAutomation",
     "Department_external_code": "DepartmentAutomation"
   },

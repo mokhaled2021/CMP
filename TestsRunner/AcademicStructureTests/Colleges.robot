@@ -19,4 +19,4 @@ Delete a College
     Delete Doctype By Name    College    col1
 
 Create new
-    Create Doctype By Name    doctype=College
+    Create College By Name    doctype=College

@@ -4,15 +4,15 @@
     "password": "Medad@123"
   },
   "Inistitutions": {
-    "Institution_Code": "KdHhn-01",
-    "Institution_Name": "MKhaledAutomation",
+    "Institution_Code": "inst1",
+    "Institution_Name": "inst1",
     "Website": "http://www.goohgle.com",
     "Email": "test@thest.com",
     "Location": "Tanta",
     "MOE_Number": "15"
   },
   "Campuses": {
-    "Campus_name": "khaledAutomation",
+    "Campus_name": "camp1",
     "Campus_code": "12345",
     "Campus_location": "data"
   },

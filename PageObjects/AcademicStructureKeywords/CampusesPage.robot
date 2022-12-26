@@ -37,7 +37,7 @@ Fill field campus code
     Input Text    ${campus_code_Locator}    ${object["Campuses"]["Campus_code"]}
 
 Fill field campus location
-    Input Text    ${campus_location_Locator}    Arar City
+    Input Text    ${campus_location_Locator}    Helwan
     sleep    2
     Press Keys    ${campus_location_Locator}    ENTER
     sleep    1

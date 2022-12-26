@@ -15,5 +15,8 @@ Create a College
     Submit College Form
     Successfully Messages Appears After Submitting
 
-Delete College
-    Delete college By API
+Delete a College
+    Delete Doctype By Name    College    col1
+
+Create new
+    Create Doctype By Name    doctype=College

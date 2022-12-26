@@ -2,10 +2,6 @@
 Resource    ../commons/common.robot
 
 
-*** Variables ***
-${base_URL}     https://cmp-test.medadstg.com/
-
-
 *** Keywords ***
 Navigate to Add Department
     Open the AcademicStructure page
@@ -38,18 +34,14 @@ Select field College
     Click Element    ${Colleges_College_Name_Option}
     # select campus
     Wait Until Page Contains Element    ${Colleges_Campus_Name_Locator}    timeout=10
-    Input Text    ${Colleges_Campus_Name_Locator}    Arar
+    Click Element    ${Colleges_Campus_Name_Locator}
+    sleep    2
+    Wait Until Page Contains Element    ${Colleges_Campus_Name_Option}    timeout=10
+    Click Element    ${Colleges_Campus_Name_Option}
+    #Input Text    ${Colleges_Campus_Name_Locator}    ${Colleges_Campus_Name_Option}
     sleep    2
     Press Keys    ${Colleges_Campus_Name_Locator}    ENTER
     sleep    1
 
 Submit Department Form
     Click Element    ${Submit_Department}
-
-Delete Department By API
-    ${authorization}=    Create List    d969e59bcd0761b    30c81a805de0ef7
-    Create Session    DeleteDepartmnet    ${base_URL}    auth=${authorization}
-    ${headers}=    Create Dictionary    Content-Type=application/json
-    ${response}=    DELETE On Session    DeleteDepartmnet    /api/resource/Department/dep1    headers=${headers}
-    ${status}=    Convert To String    ${response.status_code}
-    Should Be Equal    ${status}    202

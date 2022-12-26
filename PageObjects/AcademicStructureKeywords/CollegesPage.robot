@@ -2,11 +2,6 @@
 Resource    ../commons/common.robot
 
 
-*** Variables ***
-${DeleteCollege}    /api/resource/College
-${base_URL}         https://cmp-test.medadstg.com/
-
-
 *** Keywords ***
 Navigate to Add College
     Open the AcademicStructure page
@@ -50,11 +45,3 @@ Submit College Form
     Click Element    ${Submit_college}
     sleep    2
     Wait Until Page Contains Element    ${Successfully_Saved}
-
-Delete college By API
-    ${authorization}=    Create List    d969e59bcd0761b    30c81a805de0ef7
-    Create Session    DeleteCollege    ${base_URL}    auth=${authorization}
-    ${headers}=    Create Dictionary    Content-Type=application/json
-    ${response}=    DELETE On Session    DeleteCollege    /api/resource/College/col1    headers=${headers}
-    ${status}=    Convert To String    ${response.status_code}
-    Should Be Equal    ${status}    202

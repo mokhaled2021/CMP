@@ -1,78 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221222 00:20:03.837" rpa="false" schemaversion="3">
-<suite id="s1" name="Departments" source="c:\Users\MKhaled\CMP\TestsRunner\AcademicStructureTests\Departments.robot">
-<test id="s1-t1" name="Delete Department" line="18">
-<kw name="Delete Department By API" library="DepartmentPage">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221226 00:13:43.378" rpa="false" schemaversion="3">
+<suite id="s1" name="Colleges" source="c:\Users\MKhaled\CMP\TestsRunner\AcademicStructureTests\Colleges.robot">
+<test id="s1-t1" name="Create new" line="21">
+<kw name="Create Doctype By Name" library="common">
+<arg>doctype=College</arg>
 <kw name="Create List" library="BuiltIn">
 <var>${authorization}</var>
 <arg>d969e59bcd0761b</arg>
 <arg>30c81a805de0ef7</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20221222 00:20:04.557" level="INFO">${authorization} = ['d969e59bcd0761b', '30c81a805de0ef7']</msg>
-<status status="PASS" starttime="20221222 00:20:04.557" endtime="20221222 00:20:04.560"/>
-</kw>
-<kw name="Create Session" library="RequestsLibrary">
-<arg>DeleteDepartmnet</arg>
-<arg>${base_URL}</arg>
-<arg>auth=${authorization}</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20221222 00:20:04.561" level="INFO">Creating Session using : alias=DeleteDepartmnet, url=https://cmp-test.medadstg.com/, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x00000197FE243EB0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20221222 00:20:04.560" endtime="20221222 00:20:04.561"/>
+<msg timestamp="20221226 00:13:44.043" level="INFO">${authorization} = ['d969e59bcd0761b', '30c81a805de0ef7']</msg>
+<status status="PASS" starttime="20221226 00:13:44.042" endtime="20221226 00:13:44.045"/>
 </kw>
 <kw name="Create Dictionary" library="BuiltIn">
-<var>${headers}</var>
-<arg>Content-Type=application/json</arg>
+<var>${campus}</var>
+<arg>campus=Cairo_male</arg>
 <doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20221222 00:20:04.562" level="INFO">${headers} = {'Content-Type': 'application/json'}</msg>
-<status status="PASS" starttime="20221222 00:20:04.561" endtime="20221222 00:20:04.562"/>
+<msg timestamp="20221226 00:13:44.047" level="INFO">${campus} = {'campus': 'Cairo_male'}</msg>
+<status status="PASS" starttime="20221226 00:13:44.046" endtime="20221226 00:13:44.047"/>
 </kw>
-<kw name="DELETE On Session" library="RequestsLibrary">
+<kw name="Create List" library="BuiltIn">
+<var>${array}</var>
+<arg>${campus}</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20221226 00:13:44.047" level="INFO">${array} = [{'campus': 'Cairo_male'}]</msg>
+<status status="PASS" starttime="20221226 00:13:44.047" endtime="20221226 00:13:44.048"/>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<var>${body}</var>
+<arg>name=test3350112</arg>
+<arg>college_name=test3350112</arg>
+<arg>college_code=test3350112</arg>
+<arg>college_external_code=test33</arg>
+<arg>campuses=${array}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<msg timestamp="20221226 00:13:44.048" level="INFO">${body} = {'name': 'test3350112', 'college_name': 'test3350112', 'college_code': 'test3350112', 'college_external_code': 'test33', 'campuses': [{'campus': 'Cairo_male'}]}</msg>
+<status status="PASS" starttime="20221226 00:13:44.048" endtime="20221226 00:13:44.048"/>
+</kw>
+<kw name="Create Session" library="RequestsLibrary">
+<arg>CreateDoctype</arg>
+<arg>${site_url}</arg>
+<arg>auth=${authorization}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<msg timestamp="20221226 00:13:44.049" level="INFO">Creating Session using : alias=CreateDoctype, url=https://cmp-test.medadstg.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001AA0FD91B20&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20221226 00:13:44.048" endtime="20221226 00:13:44.049"/>
+</kw>
+<kw name="POST On Session" library="RequestsLibrary">
 <var>${response}</var>
-<arg>DeleteDepartmnet</arg>
-<arg>/api/resource/Department/dep1</arg>
-<arg>headers=${headers}</arg>
-<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
-<msg timestamp="20221222 00:20:05.880" level="INFO">DELETE Request : url=https://cmp-test.medadstg.com/api/resource/Department/dep1 
- path_url=/api/resource/Department/dep1 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '0', 'Authorization': 'Basic ZDk2OWU1OWJjZDA3NjFiOjMwYzgxYTgwNWRlMGVmNw=='} 
- body=None 
+<arg>CreateDoctype</arg>
+<arg>/api/resource/${doctype}</arg>
+<arg>json=${body}</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<msg timestamp="20221226 00:13:44.536" level="INFO">POST Request : url=https://cmp-test.medadstg.com/api/resource/College 
+ path_url=/api/resource/College 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '160', 'Content-Type': 'application/json', 'Authorization': 'Basic ZDk2OWU1OWJjZDA3NjFiOjMwYzgxYTgwNWRlMGVmNw=='} 
+ body=b'{"name": "test3350112", "college_name": "test3350112", "college_code": "test3350112", "college_external_code": "test33", "campuses": [{"campus": "Cairo_male"}]}' 
  </msg>
-<msg timestamp="20221222 00:20:05.881" level="INFO">DELETE Response : url=https://cmp-test.medadstg.com/api/resource/Department/dep1 
- status=202, reason=Accepted 
- headers={'Date': 'Wed, 21 Dec 2022 22:21:02 GMT', 'Content-Type': 'application/json', 'Content-Length': '16', 'Connection': 'keep-alive', 'set-cookie': 'sid=Guest; Expires=Sun, 25-Dec-2022 01:21:02 GMT; HttpOnly; Path=/; SameSite=Lax, system_user=no; Path=/; SameSite=Lax, full_name=Guest; Path=/; SameSite=Lax, user_id=Guest; Path=/; SameSite=Lax, user_image=; Path=/; SameSite=Lax, SOLRSSESSION=traefik-stg; path=/', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=%2BSFpeTOJ4iWRaUVwmO9zhZGtUu2TQxq3bfnEx%2FayhZI5fyhlC%2FWP%2FATdF8qCcJEBRaZCwoq2ybqwyebGF%2FgJKsR5CKnBSVzDyXNnEiIdkbDR6%2BpmsIdxEwf89A7B7mJDqLYSUFVjjA%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '77d40226eec1103b-MRS'} 
- body={"message":"ok"} 
+<msg timestamp="20221226 00:13:44.536" level="INFO">POST Response : url=https://cmp-test.medadstg.com/api/resource/College 
+ status=200, reason=OK 
+ headers={'Date': 'Sun, 25 Dec 2022 22:14:39 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'vary': 'Accept-Encoding', 'set-cookie': 'sid=Guest; Expires=Thu, 29-Dec-2022 01:14:38 GMT; HttpOnly; Path=/; SameSite=Lax, system_user=no; Path=/; SameSite=Lax, full_name=Guest; Path=/; SameSite=Lax, user_id=Guest; Path=/; SameSite=Lax, user_image=; Path=/; SameSite=Lax, SOLRSSESSION=traefik-stg; path=/', 'x-frame-options': 'SAMEORIGIN', 'strict-transport-security': 'max-age=63072000; includeSubDomains; preload', 'x-content-type-options': 'nosniff', 'x-xss-protection': '1; mode=block', 'referrer-policy': 'same-origin, strict-origin-when-cross-origin', 'content-encoding': 'gzip', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=M8lbLmWADLzJrL87z9hrDtueC26evPTMuisUrp%2FA7VDObaO5jXSFBCEM4rVbBgYRN2CU3H4ELsAfwa%2Bs5ijgVmZdTz0X8a0uBYA8jS6tcKmYIpdCZDG5F490ENa%2BapEvPbpQAYB0mg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '77f4ee4cbd940d82-MRS'} 
+ body={"data":{"name":"test3350112","owner":"mohammed.khaled@naseej.com","creation":"2022-12-26 01:14:39.013373","modified":"2022-12-26 01:14:39.013373","modified_by":"mohammed.khaled@naseej.com","parent":null,"parentfield":null,"parenttype":null,"idx":0,"docstatus":0,"college_name":"test3350112","college_code":"test3350112","college_external_code":"test33","establishment_date":null,"doctype":"College","campuses":[{"name":"9f0052be9b","owner":"mohammed.khaled@naseej.com","creation":"2022-12-26 01:14:39.013373","modified":"2022-12-26 01:14:39.013373","modified_by":"mohammed.khaled@naseej.com","parent":"test3350112","parentfield":"campuses","parenttype":"College","idx":1,"docstatus":0,"campus":"Cairo_male","doctype":"College Campus Item","__unsaved":1}]}} 
  </msg>
-<msg timestamp="20221222 00:20:05.881" level="INFO">c:\ProgramData\robocorp\ht\4fa89bc_b1f3c24_1c0bc041\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'cmp-test.medadstg.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+<msg timestamp="20221226 00:13:44.537" level="INFO">c:\ProgramData\robocorp\ht\4fa89bc_b1f3c24_1c0bc041\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'cmp-test.medadstg.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<msg timestamp="20221222 00:20:05.889" level="INFO">${response} = &lt;Response [202]&gt;</msg>
-<status status="PASS" starttime="20221222 00:20:04.562" endtime="20221222 00:20:05.889"/>
+<msg timestamp="20221226 00:13:44.538" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20221226 00:13:44.049" endtime="20221226 00:13:44.538"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${status}</var>
 <arg>${response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20221222 00:20:05.893" level="INFO">${status} = 202</msg>
-<status status="PASS" starttime="20221222 00:20:05.890" endtime="20221222 00:20:05.894"/>
+<msg timestamp="20221226 00:13:44.541" level="INFO">${status} = 200</msg>
+<status status="PASS" starttime="20221226 00:13:44.539" endtime="20221226 00:13:44.541"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${status}</arg>
-<arg>202</arg>
+<arg>200</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" starttime="20221222 00:20:05.894" endtime="20221222 00:20:05.895"/>
+<status status="PASS" starttime="20221226 00:13:44.541" endtime="20221226 00:13:44.542"/>
 </kw>
-<status status="PASS" starttime="20221222 00:20:04.556" endtime="20221222 00:20:05.895"/>
+<kw name="Log To Console" library="BuiltIn">
+<arg>the status is ${status}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20221226 00:13:44.542" endtime="20221226 00:13:44.543"/>
+</kw>
+<status status="PASS" starttime="20221226 00:13:44.042" endtime="20221226 00:13:44.543"/>
 </kw>
 <kw name="closing Browser" library="common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221222 00:20:05.897" endtime="20221222 00:20:05.897"/>
+<status status="PASS" starttime="20221226 00:13:44.545" endtime="20221226 00:13:44.546"/>
 </kw>
-<status status="PASS" starttime="20221222 00:20:05.896" endtime="20221222 00:20:05.897"/>
+<status status="PASS" starttime="20221226 00:13:44.545" endtime="20221226 00:13:44.546"/>
 </kw>
-<status status="PASS" starttime="20221222 00:20:04.555" endtime="20221222 00:20:05.898"/>
+<status status="PASS" starttime="20221226 00:13:44.040" endtime="20221226 00:13:44.547"/>
 </test>
 <doc>MedadCMP Academic Structure</doc>
-<status status="PASS" starttime="20221222 00:20:03.845" endtime="20221222 00:20:05.901"/>
+<status status="PASS" starttime="20221226 00:13:43.384" endtime="20221226 00:13:44.548"/>
 </suite>
 <statistics>
 <total>
@@ -81,7 +105,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Departments">Departments</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Colleges">Colleges</stat>
 </suite>
 </statistics>
 <errors>

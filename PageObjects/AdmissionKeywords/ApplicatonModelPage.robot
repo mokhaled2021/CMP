@@ -1,7 +1,6 @@
 *** Settings ***
 Resource    ../commons/common.robot
 
-
 *** Keywords ***
 Navigate to Add Application Model
     Open the Admission page

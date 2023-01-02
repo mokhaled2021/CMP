@@ -1,101 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221226 14:36:34.113" rpa="false" schemaversion="3">
-<suite id="s1" name="Colleges" source="c:\Users\MKhaled\CMP\testsrunner\academicstructuretests\colleges.robot">
-<test id="s1-t1" name="Create new" line="21">
-<kw name="Create College By Name" library="CollegesPage">
-<arg>doctype=College</arg>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230102 22:48:26.193" rpa="false" schemaversion="3">
+<suite id="s1" name="Colleges" source="c:\Users\MKhaled\CMP\TestsRunner\AcademicStructureTests\Colleges.robot">
+<test id="s1-t1" name="Delete a College By API" line="18">
+<kw name="Delete Doctype By Name" library="common">
+<arg>College</arg>
+<arg>col1</arg>
 <kw name="Create List" library="BuiltIn">
 <var>${authorization}</var>
 <arg>d969e59bcd0761b</arg>
 <arg>30c81a805de0ef7</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20221226 14:36:34.872" level="INFO">${authorization} = ['d969e59bcd0761b', '30c81a805de0ef7']</msg>
-<status status="PASS" starttime="20221226 14:36:34.872" endtime="20221226 14:36:34.880"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${campus}</var>
-<arg>campus=Cairo_male</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20221226 14:36:34.880" level="INFO">${campus} = {'campus': 'Cairo_male'}</msg>
-<status status="PASS" starttime="20221226 14:36:34.880" endtime="20221226 14:36:34.880"/>
-</kw>
-<kw name="Create List" library="BuiltIn">
-<var>${array}</var>
-<arg>${campus}</arg>
-<doc>Returns a list containing given items.</doc>
-<msg timestamp="20221226 14:36:34.880" level="INFO">${array} = [{'campus': 'Cairo_male'}]</msg>
-<status status="PASS" starttime="20221226 14:36:34.880" endtime="20221226 14:36:34.880"/>
-</kw>
-<kw name="Create Dictionary" library="BuiltIn">
-<var>${body}</var>
-<arg>name=test0</arg>
-<arg>college_name=test0</arg>
-<arg>college_code=test0</arg>
-<arg>college_external_code=test33</arg>
-<arg>campuses=${array}</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<msg timestamp="20221226 14:36:34.880" level="INFO">${body} = {'name': 'test0', 'college_name': 'test0', 'college_code': 'test0', 'college_external_code': 'test33', 'campuses': [{'campus': 'Cairo_male'}]}</msg>
-<status status="PASS" starttime="20221226 14:36:34.880" endtime="20221226 14:36:34.880"/>
+<msg timestamp="20230102 22:48:28.845" level="INFO">${authorization} = ['d969e59bcd0761b', '30c81a805de0ef7']</msg>
+<status status="PASS" starttime="20230102 22:48:28.845" endtime="20230102 22:48:28.852"/>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
-<arg>CreateDoctype</arg>
+<arg>DeleteDoctype</arg>
 <arg>${site_url}</arg>
 <arg>auth=${authorization}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20221226 14:36:34.880" level="INFO">Creating Session using : alias=CreateDoctype, url=https://cmp-test.medadstg.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000002922B0CF2B0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20221226 14:36:34.880" endtime="20221226 14:36:34.880"/>
+<msg timestamp="20230102 22:48:28.853" level="INFO">Creating Session using : alias=DeleteDoctype, url=https://cmp-test.medadstg.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x0000027644D100A0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230102 22:48:28.853" endtime="20230102 22:48:28.854"/>
 </kw>
-<kw name="POST On Session" library="RequestsLibrary">
+<kw name="DELETE On Session" library="RequestsLibrary">
 <var>${response}</var>
-<arg>CreateDoctype</arg>
-<arg>/api/resource/${doctype}</arg>
-<arg>json=${body}</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<msg timestamp="20221226 14:36:35.389" level="INFO">POST Request : url=https://cmp-test.medadstg.com/api/resource/College 
- path_url=/api/resource/College 
- headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '142', 'Content-Type': 'application/json', 'Authorization': 'Basic ZDk2OWU1OWJjZDA3NjFiOjMwYzgxYTgwNWRlMGVmNw=='} 
- body=b'{"name": "test0", "college_name": "test0", "college_code": "test0", "college_external_code": "test33", "campuses": [{"campus": "Cairo_male"}]}' 
+<arg>DeleteDoctype</arg>
+<arg>/api/resource/${doctype}/${doctypevalue}</arg>
+<doc>Sends a DELETE request on a previously created HTTP Session.</doc>
+<msg timestamp="20230102 22:48:29.644" level="INFO">DELETE Request : url=https://cmp-test.medadstg.com/api/resource/College/col1 
+ path_url=/api/resource/College/col1 
+ headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0', 'Authorization': 'Basic ZDk2OWU1OWJjZDA3NjFiOjMwYzgxYTgwNWRlMGVmNw=='} 
+ body=None 
  </msg>
-<msg timestamp="20221226 14:36:35.391" level="INFO">POST Response : url=https://cmp-test.medadstg.com/api/resource/College 
- status=409, reason=Conflict 
- headers={'Date': 'Mon, 26 Dec 2022 12:37:29 GMT', 'Content-Type': 'application/json', 'Content-Length': '2575', 'Connection': 'keep-alive', 'set-cookie': 'sid=Guest; Expires=Thu, 29-Dec-2022 15:37:29 GMT; HttpOnly; Path=/; SameSite=Lax, system_user=no; Path=/; SameSite=Lax, full_name=Guest; Path=/; SameSite=Lax, user_id=Guest; Path=/; SameSite=Lax, user_image=; Path=/; SameSite=Lax, SOLRSSESSION=traefik-stg; path=/', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=PXa3X2n988EmDORZjRRH2DVHaqNtYad1%2FwDa1GbWxjrRFvr67eFU8AOGdENWmyMGBT9hWzVEI8UB4Hrnl6VvhtTHpPZqfRSKM8okJsTQ%2BmYzcy9jZoWEYNri065DE6305fOn8jdtRQ%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '77f9de394d0b12ac-MRS'} 
- body={"exception":"frappe.exceptions.DuplicateEntryError: ('College', 'test0', IntegrityError(1062, \"Duplicate entry 'test0' for key 'tabCollege.PRIMARY'\"))","exc":"[\"Traceback (most recent call last):\\n  File \\\"apps/frappe/frappe/model/base_document.py\\\", line 400, in db_insert\\n    frappe.db.sql(\\n  File \\\"apps/frappe/frappe/database/database.py\\\", line 174, in sql\\n    self._cursor.execute(query, values)\\n  File \\\"env/lib/python3.9/site-packages/pymysql/cursors.py\\\", line 148, in execute\\n    result = self._query(query)\\n  File \\\"env/lib/python3.9/site-packages/pymysql/cursors.py\\\", line 310, in _query\\n    conn.query(q)\\n  File \\\"env/lib/python3.9/site-packages/pymysql/connections.py\\\", line 548, in query\\n    self._affected_rows = self._read_query_result(unbuffered=unbuffered)\\n  File \\\"env/lib/python3.9/site-packages/pymysql/connections.py\\\", line 775, in _read_query_result\\n    result.read()\\n  File \\\"env/lib/python3.9/site-packages/pymysql/connections.py\\\", line 1156, in read\\n    first_packet = self.connection._read_packet()\\n  File \\\"env/lib/python3.9/site-packages/pymysql/connections.py\\\", line 725, in _read_packet\\n    packet.raise_for_error()\\n  File \\\"env/lib/python3.9/site-packages/pymysql/protocol.py\\\", line 221, in raise_for_error\\n    err.raise_mysql_exception(self._data)\\n  File \\\"env/lib/python3.9/site-packages/pymysql/err.py\\\", line 143, in raise_mysql_exception\\n    raise errorclass(errno, errval)\\npymysql.err.IntegrityError: (1062, \\\"Duplicate entry 'test0' for key 'tabCollege.PRIMARY'\\\")\\n\\nDuring handling of the above exception, another exception occurred:\\n\\nTraceback (most recent call last):\\n  File \\\"apps/frappe/frappe/app.py\\\", line 69, in application\\n    response = frappe.api.handle()\\n  File \\\"apps/frappe/frappe/api.py\\\", line 138, in handle\\n    doc = frappe.get_doc(data).insert()\\n  File \\\"apps/frappe/frappe/model/document.py\\\", line 276, in insert\\n    raise e\\n  File \\\"apps/frappe/frappe/model/document.py\\\", line 273, in insert\\n    self.db_insert()\\n  File \\\"apps/frappe/frappe/model/base_document.py\\\", line 425, in db_insert\\n    raise frappe.DuplicateEntryError(self.doctype, self.name, e)\\nfrappe.exceptions.DuplicateEntryError: ('College', 'test0', IntegrityError(1062, \\\"Duplicate entry 'test0' for key 'tabCollege.PRIMARY'\\\"))\\n\"]","_server_messages":"[\"{\\\"message\\\": \\\"College &lt;b&gt;test0&lt;/b&gt; already exists\\\", \\\"title\\\": \\\"Duplicate Name\\\", \\\"indicator\\\": \\\"red\\\"}\"]"} 
+<msg timestamp="20230102 22:48:29.645" level="INFO">DELETE Response : url=https://cmp-test.medadstg.com/api/resource/College/col1 
+ status=404, reason=Not Found 
+ headers={'Date': 'Mon, 02 Jan 2023 20:49:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '2', 'Connection': 'keep-alive', 'set-cookie': 'sid=Guest; Expires=Thu, 05-Jan-2023 23:49:18 GMT; HttpOnly; Path=/; SameSite=Lax, system_user=no; Path=/; SameSite=Lax, full_name=Guest; Path=/; SameSite=Lax, user_id=Guest; Path=/; SameSite=Lax, user_image=; Path=/; SameSite=Lax, SOLRSSESSION=traefik-stg; path=/', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Ltu9wK6eIK433gVewue%2F9kQMguZz%2Bp9swpXZiuteZWfjFSbiAQl28x66MNcpANA7P57q8m%2BkXzbun5k09xaBs7I4I2BgTN8ZF6doDGBrsaDewW6RTJjnUTbMTJV%2Fg%2BCKzX%2BCklfWgA%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '78365c478f0c0daf-MRS'} 
+ body={} 
  </msg>
-<msg timestamp="20221226 14:36:35.392" level="INFO">c:\ProgramData\robocorp\ht\4fa89bc_b1f3c24_1c0bc041\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'cmp-test.medadstg.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+<msg timestamp="20230102 22:48:29.646" level="INFO">c:\ProgramData\robocorp\ht\4fa89bc_b1f3c24_1c0bc041\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'cmp-test.medadstg.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<msg timestamp="20221226 14:36:35.392" level="FAIL">HTTPError: 409 Client Error: Conflict for url: https://cmp-test.medadstg.com/api/resource/College</msg>
-<status status="FAIL" starttime="20221226 14:36:34.880" endtime="20221226 14:36:35.398"/>
+<msg timestamp="20230102 22:48:29.650" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://cmp-test.medadstg.com/api/resource/College/col1</msg>
+<status status="FAIL" starttime="20230102 22:48:28.854" endtime="20230102 22:48:29.655"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${status}</var>
 <arg>${response.status_code}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="NOT RUN" starttime="20221226 14:36:35.398" endtime="20221226 14:36:35.407"/>
+<status status="NOT RUN" starttime="20230102 22:48:29.656" endtime="20230102 22:48:29.657"/>
 </kw>
 <kw name="Should Be Equal" library="BuiltIn">
 <arg>${status}</arg>
-<arg>200</arg>
+<arg>202</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20221226 14:36:35.407" endtime="20221226 14:36:35.407"/>
+<status status="NOT RUN" starttime="20230102 22:48:29.658" endtime="20230102 22:48:29.658"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>the status is: ${status}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20221226 14:36:35.407" endtime="20221226 14:36:35.407"/>
-</kw>
-<status status="FAIL" starttime="20221226 14:36:34.872" endtime="20221226 14:36:35.407"/>
+<status status="FAIL" starttime="20230102 22:48:28.844" endtime="20230102 22:48:29.659"/>
 </kw>
 <kw name="closing Browser" library="common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221226 14:36:35.414" endtime="20221226 14:36:35.414"/>
+<status status="PASS" starttime="20230102 22:48:29.665" endtime="20230102 22:48:29.666"/>
 </kw>
-<status status="PASS" starttime="20221226 14:36:35.414" endtime="20221226 14:36:35.414"/>
+<status status="PASS" starttime="20230102 22:48:29.663" endtime="20230102 22:48:29.666"/>
 </kw>
-<status status="FAIL" starttime="20221226 14:36:34.872" endtime="20221226 14:36:35.414">HTTPError: 409 Client Error: Conflict for url: https://cmp-test.medadstg.com/api/resource/College</status>
+<status status="FAIL" starttime="20230102 22:48:28.842" endtime="20230102 22:48:29.668">HTTPError: 404 Client Error: Not Found for url: https://cmp-test.medadstg.com/api/resource/College/col1</status>
 </test>
 <doc>MedadCMP Academic Structure</doc>
-<status status="FAIL" starttime="20221226 14:36:34.121" endtime="20221226 14:36:35.422"/>
+<status status="FAIL" starttime="20230102 22:48:26.208" endtime="20230102 22:48:29.673"/>
 </suite>
 <statistics>
 <total>

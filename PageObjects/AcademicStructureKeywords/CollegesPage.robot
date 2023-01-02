@@ -46,9 +46,9 @@ Create College By Name
     ${authorization}=    Create List    d969e59bcd0761b    30c81a805de0ef7
     ${campus}=    Create Dictionary    campus=Cairo_male
     ${array}=    Create List    ${campus}
-    ${body}=    Create Dictionary    name=test0
-...    college_name=test0
-...    college_code=test0
+    ${body}=    Create Dictionary    name=test04
+...    college_name=test04
+...    college_code=test04
 ...    college_external_code=test33
 ...    campuses=${array}
     Create Session    CreateDoctype    ${site_url}    auth=${authorization}

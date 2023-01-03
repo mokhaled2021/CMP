@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20221226 14:35:05.845" rpa="false" schemaversion="3">
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230102 23:20:31.207" rpa="false" schemaversion="3">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\MKhaled\.vscode\extensions\robocorp.robotframework-lsp-1.7.3\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<kw name="Delete Doctype By Name">
-<arg>College</arg>
-<arg>col1</arg>
-<msg timestamp="20221226 14:35:06.677" level="FAIL">No keyword with name 'Delete Doctype By Name' found.</msg>
-<status status="FAIL" starttime="20221226 14:35:06.677" endtime="20221226 14:35:06.677"/>
+<status status="PASS" starttime="20230102 23:20:31.236" endtime="20230102 23:20:40.565"/>
 </kw>
-<status status="PASS" starttime="20221226 14:35:05.885" endtime="20221226 14:35:43.600"/>
-</kw>
-<status status="PASS" starttime="20221226 14:35:05.885" endtime="20221226 14:35:43.600"/>
+<status status="PASS" starttime="20230102 23:20:31.236" endtime="20230102 23:20:40.565"/>
 </test>
-<status status="PASS" starttime="20221226 14:35:05.850" endtime="20221226 14:35:43.600"/>
+<status status="PASS" starttime="20230102 23:20:31.209" endtime="20230102 23:20:40.566"/>
 </suite>
 <statistics>
 <total>

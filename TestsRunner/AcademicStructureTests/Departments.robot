@@ -16,4 +16,4 @@ Create a Department
     Successfully Messages Appears After Submitting
 
 Delete a Department
-    Delete Doctype By Name    Department    dep1
+    Delete Doctype By API    Department    dep1

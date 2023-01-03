@@ -8,12 +8,13 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-Create a Campus
+GUI - Create a Campus
     Login To The ControlPanel
     Navigate to Add Campuses
     Fill out campuses Details
     Submit Campus Form
     Successfully Messages Appears After Submitting
 
-Delete a Campus
+API - Delete a Campus
     Delete Doctype By Name    Campus    camp1
+    Status Should Be    202

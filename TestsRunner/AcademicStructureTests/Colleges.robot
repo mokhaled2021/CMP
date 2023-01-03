@@ -8,15 +8,21 @@ Test Teardown       closing Browser
 
 
 *** Test Cases ***
-Create a College
+GUI - Create a College
     Login To The ControlPanel
     Navigate to Add College
     Fill out Colleges Details
     Submit College Form
     Successfully Messages Appears After Submitting
+    [Teardown]    Delete Doctype By API    doctype=College    doctypevalue=col1
 
-Delete a College By API
-    Delete Doctype By Name    College    col1
+API - Delete a College By API
+    [Setup]    Create College By API    doctype=College    collegeName=test20
+    Status Should Be    200
+    Delete Doctype By API    doctype=College    doctypevalue=test20
+    Status Should Be    202
 
-Create new College By API
-    Create College By Name    doctype=College
+API - Create new College By API
+    Create College By API    doctype=College    collegeName=test2
+    Status Should Be    200
+    [Teardown]    Delete Doctype By API    doctype=College    doctypevalue=test2

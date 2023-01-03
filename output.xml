@@ -1,80 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230102 22:48:26.193" rpa="false" schemaversion="3">
-<suite id="s1" name="Colleges" source="c:\Users\MKhaled\CMP\TestsRunner\AcademicStructureTests\Colleges.robot">
-<test id="s1-t1" name="Delete a College By API" line="18">
-<kw name="Delete Doctype By Name" library="common">
-<arg>College</arg>
-<arg>col1</arg>
+<robot generator="Robot 5.0.1 (Python 3.9.13 on win32)" generated="20230103 09:28:12.552" rpa="false" schemaversion="3">
+<suite id="s1" name="Departments" source="c:\Users\MKhaled\CMP\TestsRunner\AcademicStructureTests\Departments.robot">
+<test id="s1-t1" name="Delete a Department" line="18">
+<kw name="Delete Doctype By API" library="common">
+<arg>Department</arg>
+<arg>dep1</arg>
 <kw name="Create List" library="BuiltIn">
 <var>${authorization}</var>
 <arg>d969e59bcd0761b</arg>
 <arg>30c81a805de0ef7</arg>
 <doc>Returns a list containing given items.</doc>
-<msg timestamp="20230102 22:48:28.845" level="INFO">${authorization} = ['d969e59bcd0761b', '30c81a805de0ef7']</msg>
-<status status="PASS" starttime="20230102 22:48:28.845" endtime="20230102 22:48:28.852"/>
+<msg timestamp="20230103 09:28:13.776" level="INFO">${authorization} = ['d969e59bcd0761b', '30c81a805de0ef7']</msg>
+<status status="PASS" starttime="20230103 09:28:13.775" endtime="20230103 09:28:13.781"/>
 </kw>
 <kw name="Create Session" library="RequestsLibrary">
 <arg>DeleteDoctype</arg>
 <arg>${site_url}</arg>
 <arg>auth=${authorization}</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<msg timestamp="20230102 22:48:28.853" level="INFO">Creating Session using : alias=DeleteDoctype, url=https://cmp-test.medadstg.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x0000027644D100A0&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20230102 22:48:28.853" endtime="20230102 22:48:28.854"/>
+<msg timestamp="20230103 09:28:13.785" level="INFO">Creating Session using : alias=DeleteDoctype, url=https://cmp-test.medadstg.com, headers={},                     cookies={}, auth=&lt;requests.auth.HTTPBasicAuth object at 0x000001FB54FD0850&gt;, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20230103 09:28:13.782" endtime="20230103 09:28:13.786"/>
 </kw>
 <kw name="DELETE On Session" library="RequestsLibrary">
-<var>${response}</var>
 <arg>DeleteDoctype</arg>
 <arg>/api/resource/${doctype}/${doctypevalue}</arg>
 <doc>Sends a DELETE request on a previously created HTTP Session.</doc>
-<msg timestamp="20230102 22:48:29.644" level="INFO">DELETE Request : url=https://cmp-test.medadstg.com/api/resource/College/col1 
- path_url=/api/resource/College/col1 
+<msg timestamp="20230103 09:28:14.699" level="INFO">DELETE Request : url=https://cmp-test.medadstg.com/api/resource/Department/dep1 
+ path_url=/api/resource/Department/dep1 
  headers={'User-Agent': 'python-requests/2.28.1', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0', 'Authorization': 'Basic ZDk2OWU1OWJjZDA3NjFiOjMwYzgxYTgwNWRlMGVmNw=='} 
  body=None 
  </msg>
-<msg timestamp="20230102 22:48:29.645" level="INFO">DELETE Response : url=https://cmp-test.medadstg.com/api/resource/College/col1 
- status=404, reason=Not Found 
- headers={'Date': 'Mon, 02 Jan 2023 20:49:18 GMT', 'Content-Type': 'application/json', 'Content-Length': '2', 'Connection': 'keep-alive', 'set-cookie': 'sid=Guest; Expires=Thu, 05-Jan-2023 23:49:18 GMT; HttpOnly; Path=/; SameSite=Lax, system_user=no; Path=/; SameSite=Lax, full_name=Guest; Path=/; SameSite=Lax, user_id=Guest; Path=/; SameSite=Lax, user_image=; Path=/; SameSite=Lax, SOLRSSESSION=traefik-stg; path=/', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Ltu9wK6eIK433gVewue%2F9kQMguZz%2Bp9swpXZiuteZWfjFSbiAQl28x66MNcpANA7P57q8m%2BkXzbun5k09xaBs7I4I2BgTN8ZF6doDGBrsaDewW6RTJjnUTbMTJV%2Fg%2BCKzX%2BCklfWgA%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '78365c478f0c0daf-MRS'} 
- body={} 
+<msg timestamp="20230103 09:28:14.701" level="INFO">DELETE Response : url=https://cmp-test.medadstg.com/api/resource/Department/dep1 
+ status=202, reason=Accepted 
+ headers={'Date': 'Tue, 03 Jan 2023 07:29:03 GMT', 'Content-Type': 'application/json', 'Content-Length': '16', 'Connection': 'keep-alive', 'set-cookie': 'sid=Guest; Expires=Fri, 06-Jan-2023 10:29:03 GMT; HttpOnly; Path=/; SameSite=Lax, system_user=no; Path=/; SameSite=Lax, full_name=Guest; Path=/; SameSite=Lax, user_id=Guest; Path=/; SameSite=Lax, user_image=; Path=/; SameSite=Lax, SOLRSSESSION=traefik-stg; path=/', 'CF-Cache-Status': 'DYNAMIC', 'Report-To': '{"endpoints":[{"url":"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=Iawm0R8eF%2Fq8rHETjxMmcYwZDgXyXSLsXRIfHDolYr2sK1FFTiOAGXQm6gTXsB%2BfW0APfWDVLo9x%2BIOWXzEz0IpetFhY%2FwYHgf2eSnvrDCqaeWJQ8CuV1YRfsugPWfh5%2F%2BP0TlfaGg%3D%3D"}],"group":"cf-nel","max_age":604800}', 'NEL': '{"success_fraction":0,"report_to":"cf-nel","max_age":604800}', 'Server': 'cloudflare', 'CF-RAY': '783a0569e9610da0-MRS'} 
+ body={"message":"ok"} 
  </msg>
-<msg timestamp="20230102 22:48:29.646" level="INFO">c:\ProgramData\robocorp\ht\4fa89bc_b1f3c24_1c0bc041\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'cmp-test.medadstg.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
+<msg timestamp="20230103 09:28:14.701" level="INFO">c:\ProgramData\robocorp\ht\4fa89bc_b1f3c24_1c0bc041\lib\site-packages\urllib3\connectionpool.py:1045: InsecureRequestWarning: Unverified HTTPS request is being made to host 'cmp-test.medadstg.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/1.26.x/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<msg timestamp="20230102 22:48:29.650" level="FAIL">HTTPError: 404 Client Error: Not Found for url: https://cmp-test.medadstg.com/api/resource/College/col1</msg>
-<status status="FAIL" starttime="20230102 22:48:28.854" endtime="20230102 22:48:29.655"/>
+<status status="PASS" starttime="20230103 09:28:13.786" endtime="20230103 09:28:14.703"/>
 </kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${status}</var>
-<arg>${response.status_code}</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<status status="NOT RUN" starttime="20230102 22:48:29.656" endtime="20230102 22:48:29.657"/>
-</kw>
-<kw name="Should Be Equal" library="BuiltIn">
-<arg>${status}</arg>
-<arg>202</arg>
-<doc>Fails if the given objects are unequal.</doc>
-<status status="NOT RUN" starttime="20230102 22:48:29.658" endtime="20230102 22:48:29.658"/>
-</kw>
-<status status="FAIL" starttime="20230102 22:48:28.844" endtime="20230102 22:48:29.659"/>
+<status status="PASS" starttime="20230103 09:28:13.773" endtime="20230103 09:28:14.704"/>
 </kw>
 <kw name="closing Browser" library="common" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20230102 22:48:29.665" endtime="20230102 22:48:29.666"/>
+<status status="PASS" starttime="20230103 09:28:14.706" endtime="20230103 09:28:14.706"/>
 </kw>
-<status status="PASS" starttime="20230102 22:48:29.663" endtime="20230102 22:48:29.666"/>
+<status status="PASS" starttime="20230103 09:28:14.705" endtime="20230103 09:28:14.707"/>
 </kw>
-<status status="FAIL" starttime="20230102 22:48:28.842" endtime="20230102 22:48:29.668">HTTPError: 404 Client Error: Not Found for url: https://cmp-test.medadstg.com/api/resource/College/col1</status>
+<status status="PASS" starttime="20230103 09:28:13.772" endtime="20230103 09:28:14.709"/>
 </test>
 <doc>MedadCMP Academic Structure</doc>
-<status status="FAIL" starttime="20230102 22:48:26.208" endtime="20230102 22:48:29.673"/>
+<status status="PASS" starttime="20230103 09:28:12.567" endtime="20230103 09:28:14.713"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Colleges">Colleges</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Departments">Departments</stat>
 </suite>
 </statistics>
 <errors>

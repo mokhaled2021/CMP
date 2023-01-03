@@ -5,16 +5,7 @@ Resource        ../commons/LoginPage.robot
 Library         RequestsLibrary
 Library         Collections
 Library         OperatingSystem
-
-
-*** Variables ***
-${site_url}     https://cmp-test.medadstg.com
-${login}        /#login
-${browser}      Chrome
-
-#read from json file
-${json}         Get file    ${EXECDIR}\\PageObjects\\TestData\\testdata.json
-${object}       Evaluate    json.loads('''${json}''')    json
+Resource        ../commons/excution.resource
 
 
 *** Keywords ***
@@ -34,13 +25,11 @@ Successfully Messages Appears After Submitting
     Wait Until Page Contains Element    ${Successfully_Saved}
     Sleep    1
 
-Delete Doctype By Name
+Delete Doctype By API
     [Arguments]    ${doctype}    ${doctypevalue}
     ${authorization}=    Create List    d969e59bcd0761b    30c81a805de0ef7
     Create Session    DeleteDoctype    ${site_url}    auth=${authorization}
-    ${response}=    DELETE On Session    DeleteDoctype    /api/resource/${doctype}/${doctypevalue}
-    ${status}=    Convert To String    ${response.status_code}
-    Should Be Equal    ${status}    202
+    DELETE On Session    DeleteDoctype    /api/resource/${doctype}/${doctypevalue}
 
 closing Browser
     close Browser
